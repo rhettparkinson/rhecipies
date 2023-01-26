@@ -1,0 +1,4 @@
+- name: View all
+  link: /recipes.html
+- name: 🔍
+  link: /search.html

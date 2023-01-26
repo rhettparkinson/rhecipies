@@ -1,0 +1,31 @@
+---
+layout: post
+cuisine: italian
+preptime: 90 mins
+---
+
+Who doesn't love a comforting, cheesy lasagna!
+
+## Ingredients:
+
+- 12 lasagna noodles
+- 1 container (15 oz) ricotta cheese
+- 1 egg
+- 1/4 cup chopped fresh parsley
+- 1/2 tsp salt
+- 1/4 tsp black pepper
+- 3 cups marinara sauce
+- 2 cups shredded mozzarella cheese
+- 1 cup grated Parmesan cheese
+- 2 cups chopped spinach
+- 1 cup sliced mushrooms
+
+## Method:
+
+1. Preheat oven to 375°F (190°C). Cook lasagna noodles according to package instructions, then drain and set aside.
+2. In a medium bowl, mix together ricotta cheese, egg, parsley, salt, and pepper.
+3. Spread 1 cup of marinara sauce in the bottom of a 9x13 inch baking dish.
+4. Layer 4 lasagna noodles over the sauce. 5. 5. Spread 1/2 of the ricotta mixture over the noodles. Sprinkle 1/2 cup mozzarella cheese, 1/4 cup Parmesan cheese and 1 cup of sliced mushrooms over the ricotta mixture.
+6. Repeat layers, starting with lasagna noodles, then ricotta mixture, mozzarella cheese, Parmesan cheese and sliced mushrooms.
+7. Finish with a final layer of lasagna noodles and top with remaining marinara sauce, mozzarella cheese and Parmesan cheese.
+8. Bake for 40-45 minutes, or until cheese is golden and bubbly. Let cool for 10 minutes before serving.

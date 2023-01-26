@@ -1,0 +1,23 @@
+collections:
+  cuisines:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "cuisines"
+    values:
+      layout: "cuisine"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "base"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag

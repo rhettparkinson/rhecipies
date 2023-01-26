@@ -1,0 +1,13 @@
+---
+layout: base
+title: Home
+---
+
+{% for cuisine in site.cuisines %}
+  <article>
+    <h2>
+      <a href="{{ cuisine.url }}">{{ cuisine.name }}</a>
+    </h2>
+    <p>{{ cuisine.content | markdownify | strip_html | strip_newlines | escape_once }}</p>
+  </article>
+{% endfor %}

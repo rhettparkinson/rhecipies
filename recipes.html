@@ -1,17 +1,22 @@
 ---
-layout: base
+layout: default
 title: Blog
 ---
 
-{% for post in site.posts %}
-  <article>
-    {% assign cuisine = site.cuisines | where: "short_name", post.cuisine | first %}
-    <span>
+{% for post in site.posts %} {% assign cuisine = site.cuisines | where:
+"short_name", post.cuisine | first %}
+<div class="card">
+  <div class="meta">
+    <small>
       <a href="{{ cuisine.url }}">{{ cuisine.name }}</a>
-    </span>
-    <h2>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    {{ post.excerpt }}
-  </article>
+    </small>
+  </div>
+  <a href="{{ post.url }}">
+    <article>
+      <h2>{{ post.title }}</h2>
+      {{ post.excerpt }}
+    </article>
+  </a>
+</div>
+
 {% endfor %}

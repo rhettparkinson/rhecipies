@@ -1,6 +1,6 @@
 ---
+layout: default
 title: Search
-layout: base
 ---
 
 <h1>Search recipes</h1>
@@ -18,7 +18,7 @@ layout: base
     <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 
     <script>
-      var sjs = SimpleJekyllSearch({searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('results-container'), json: '/search.json', searchResultTemplate: '<article><a href=" {{ site.url }} {url}"><h4>{title}</h4><p>{desc}</p></a></article>'})
+      var sjs = SimpleJekyllSearch({searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('results-container'), json: '/search.json', searchResultTemplate: '<div class="card"><a href="{{ site.url }}{url}"><article><h2>{title}</h2><p>{desc}</p></article></a></div>'})
     </script>
 
   </div>

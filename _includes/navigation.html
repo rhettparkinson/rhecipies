@@ -1,16 +1,18 @@
-<nav class="container-fluid" id="navigation">
-  <ul>
-    <li>
-      <a href="/">
-        <strong>Rhettcipies</strong>
-      </a>
-    </li>
-  </ul>
-  <ul>
-    {% for item in site.data.navigation %}
+<header id="nav">
+  <nav class="container-fluid">
+    <ul>
       <li>
-        <a href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
+        <a href="/">
+          <strong>Rhettcipies</strong>
+        </a>
       </li>
-    {% endfor %}
-  </ul>
-</nav>
+    </ul>
+    <ul>
+      {% for item in site.data.navigation %}
+        <li>
+          <a href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

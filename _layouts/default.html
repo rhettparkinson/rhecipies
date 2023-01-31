@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }}</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    {% seo %}
+  </head>
+  <body>
+    {% include navigation.html %}
+
+    <div id="transition-wrapper">
+      <main>
+        <section class="container">
+          {{ content }}
+        </section>
+        
+      </main>
+    </div>
+
+    <button class="contrast switcher" aria-label="Turn on dark mode"><i>Turn on dark mode</i></button>
+
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+    {% if jekyll.environment == "production" %}
+    <script src="my-analytics-script.js"></script>
+    {% endif %}
+  </body>
+</html>

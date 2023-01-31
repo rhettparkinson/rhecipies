@@ -1,14 +1,29 @@
 ---
-layout: base
+layout: default
 ---
+
+{% assign cuisine = site.cuisines | where: 'short_name', page.cuisine | first %}
+{% if cuisine %}
+<div class="meta">
+  <small>
+    <a href="{{ cuisine.url }}">{{ cuisine.name }}</a>
+  </small>
+</div>    
+{% endif %}
+
 <h1>{{ page.title }}</h1>
 
-<p>
-  {{ page.date | date_to_string }} -
-  {% assign cuisine = site.cuisines | where: 'short_name', page.cuisine | first %}
-  {% if cuisine %}
-    <a href="{{ cuisine.url }}">{{ cuisine.name }}</a>
-  {% endif %}
-</p>
+<!-- <p>
+  {{ page.date | date_to_string }} -  
+</p> -->
 
-{{ content }}
+<div class="recipe">
+  <article class="ingredients">
+    <h4>Ingredients</h4>
+    {{ site.data.ingredient }}
+  </article>
+  <article class="method">
+    <h4>Method</h4>
+    {{ site.data.method }}
+  </article>
+</div>

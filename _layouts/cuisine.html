@@ -1,16 +1,20 @@
 ---
-layout: base
+layout: default
 ---
-<h1>{{ page.name }}</h1>
 
-{{ content }}
+<header>
+  <h1>{{ page.name }}</h1>
+  {{ content }}
+</header>
 
-{% assign filtered_posts = site.posts | where: 'cuisine', page.short_name %}
-{% for post in filtered_posts %}
-  <article>
-    <h2>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    <p>{{ post.excerpt }}</p>
-  </article>
+{% assign filtered_posts = site.posts | where: 'cuisine', page.short_name %} {%
+for post in filtered_posts %}
+<div class="card">
+  <a href="{{ post.url }}">
+    <article>
+      <h2>{{ post.title }}</h2>
+      {{ post.excerpt }}
+    </article>
+  </a>
+</div>
 {% endfor %}

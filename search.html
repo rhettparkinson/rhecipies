@@ -1,26 +1,22 @@
 ---
 layout: default
-title: Search
+title: Search recipes
 ---
 
-<h1>Search recipes</h1>
+<header>
+  <h1>{{ title }}</h1>
+</header>
+
 <form>
   <div>
-
-    <!-- HTML elements for search -->
     <input
       type="text"
       id="search-input"
       placeholder="Type something in...">
     <div id="results-container"></div>
-
-    <!-- or without installing anything -->
-    <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
-
-    <script>
-      var sjs = SimpleJekyllSearch({searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('results-container'), json: '/search.json', searchResultTemplate: '<div class="card"><a href="{{ site.url }}{url}"><article><h2>{title}</h2><p>{desc}</p></article></a></div>'})
-    </script>
-
   </div>
-
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    var sjs = SimpleJekyllSearch({searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('results-container'), json: '/search.json', searchResultTemplate: '<div class="card"><a href="{{ site.url }}{url}"><article><h2>{title}</h2><p>{desc}</p></article></a></div>'})
+  </script>
 </form>

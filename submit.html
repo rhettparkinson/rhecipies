@@ -1,0 +1,39 @@
+---
+layout: default
+title: Submit a link
+---
+
+<header>
+  <h1>{{ title }}</h1>
+  <p>Found a good recipe online? Send me a link!</p>
+</header>
+
+<div class="card">
+  <form
+    action="https://getform.io/f/c8b2a06c-14ed-4618-980e-39618b15d60e"
+    method="POST"
+  >
+    <article>
+      <label for="name">
+        Your name (optional)
+        <input type="text" name="name" id="name" placeholder="Anony Mouse">
+      </label>
+      <label for="recipeUrl">
+        Recipe URL
+        <input
+          type="text"
+          id="recipeUrl"
+          name="recipeUrl"
+          placeholder="Paste the link here.."
+          required
+        />
+        <small
+          >Enter the full URL, ie.
+          https://nameofwebsite/an-awesome-recipe</small
+        >
+      </label>
+      <input type="hidden" name="_gotcha" style="display:none !important">
+      <button type="submit">Submit</button>
+    </article>
+  </form>
+</div>

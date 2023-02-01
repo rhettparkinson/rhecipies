@@ -1,4 +1,4 @@
-- name: View all
+- name: View recipies
   link: /recipes.html
-- name: 🔍
-  link: /search.html
+- name: Submit a link
+  link: /submit.html

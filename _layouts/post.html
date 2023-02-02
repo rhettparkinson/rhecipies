@@ -6,7 +6,7 @@ layout: default
 {% if cuisine %}
 <div class="meta">
   <small>
-    <a href="{{ cuisine.url }}">{{ cuisine.name }}</a>
+    <a href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
   </small>
 </div>    
 {% endif %}

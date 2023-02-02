@@ -17,6 +17,6 @@ title: Search recipes
   </div>
   <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
   <script>
-    var sjs = SimpleJekyllSearch({searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('results-container'), json: '/search.json', searchResultTemplate: '<div class="card"><a href="{{ site.url }}{url}"><article><h2>{title}</h2><p>{desc}</p></article></a></div>'})
+    var sjs = SimpleJekyllSearch({searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('results-container'), json: '/search.json', searchResultTemplate: '<div class="card"><a href="{{site.baseurl}}{url}"><article><h2>{title}</h2><p>{desc}</p></article></a></div>'})
   </script>
 </form>

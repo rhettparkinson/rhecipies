@@ -10,7 +10,7 @@ layout: default
 {% assign filtered_posts = site.posts | where: 'cuisine', page.short_name %} {%
 for post in filtered_posts %}
 <div class="card">
-  <a href="{{ post.url }}">
+  <a href="{{ post.url | relative_url }}">
     <article>
       <h2>{{ post.title }}</h2>
       {{ post.excerpt }}

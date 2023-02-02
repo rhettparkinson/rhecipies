@@ -19,6 +19,17 @@ b, strong {
   font-weight: 600;
 }
 
+main {
+
+  p {
+    
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+      line-height: 1.5rem;
+    }
+  }
+}
+
 /* page transition */
 
 #transition-wrapper {
@@ -295,7 +306,11 @@ main {
   section {
     header {
       padding-top: 0;
-      padding-bottom: calc(var(--block-spacing-vertical) / 2);
+      padding-bottom: var(--block-spacing-vertical);
+
+      @media screen and (min-width: 576px) {
+        padding-bottom: calc(var(--block-spacing-vertical) / 2);
+      }      
 
       h1 {
         margin-bottom: 0;

@@ -7,5 +7,5 @@ A place for all my recipies online, built with Jekyll static-site generator.
 ## Forms with getform.io and Zapier
 ...
 
-## Features to add
+## To-do
 ...

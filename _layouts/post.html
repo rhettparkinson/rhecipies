@@ -2,28 +2,43 @@
 layout: default
 ---
 
-{% assign cuisine = site.cuisines | where: 'short_name', page.cuisine | first %}
-{% if cuisine %}
-<div class="meta">
-  <small>
-    <a href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
-  </small>
-</div>    
-{% endif %}
+<section class="recipe">
 
-<h1>{{ page.title }}</h1>
+  <header class="recipe__header grid">
+    <div class="recipe__description">
+      {% assign cuisine = site.cuisines | where: 'short_name', page.cuisine |
+      first %} {% if cuisine %}
+      <div class="meta">
+        <small>
+          <a href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
+        </small>
+      </div>
+      {% endif %}
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.excerpt }}</p>
+    </div>
+    <div class="recipe__image">
+      <img
+        src="{{ page.image | prepend: site.baseurl }}"
+        alt="{{ page.title }}"
+        title="{{ page.title }}"
+      />
+    </div>
+  </header>
 
-<!-- <p>
-  {{ page.date | date_to_string }} -  
-</p> -->
-
-<div class="recipe">
-  <article class="ingredients">
-    <h4>Ingredients</h4>
-    {{ site.data.ingredient }}
+  <article x-data="{ ingredients: true, method: false, activeButton: 1 }" @resize.window="width = (window.innerWidth > 0) ? window.innerWidth : screen.width; if (width > 992) { ingredients = true, method = true } else { ingredients = true, method = false, activeButton = 1 }">
+    <div class="recipe__toggle">
+      <button @click="ingredients = true; method = false; activeButton = 1" :class="{ 'active': activeButton === 1 }">Ingredients</button>
+      <button @click="ingredients = false; method = true; activeButton = 2" :class="{ 'active': activeButton === 2 }">Method</button>
+    </div>
+    <div class="recipe__ingredients" x-show="ingredients">
+      <h4>Ingredients</h4>
+      {{ site.data.ingredient }}
+    </div>
+    <div class="recipe__method" x-show="method">
+      <h4>Method</h4>
+      {{ site.data.method }}
+    </div>    
   </article>
-  <article class="method">
-    <h4>Method</h4>
-    {{ site.data.method }}
-  </article>
-</div>
+
+</section>

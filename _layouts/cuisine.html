@@ -2,19 +2,23 @@
 layout: default
 ---
 
-<header>
-  <h1>{{ page.name }}</h1>
-  {{ content }}
-</header>
+<section class="container">
 
-{% assign filtered_posts = site.posts | where: 'cuisine', page.short_name %} {%
-for post in filtered_posts %}
-<div class="card">
-  <a href="{{ post.url | relative_url }}">
-    <article>
-      <h2>{{ post.title }}</h2>
-      {{ post.excerpt }}
-    </article>
-  </a>
-</div>
-{% endfor %}
+  <header>
+    <h1>{{ page.name }}</h1>
+    {{ content }}
+  </header>
+  
+  {% assign filtered_posts = site.posts | where: 'cuisine', page.short_name %} {%
+  for post in filtered_posts %}
+  <div class="card">
+    <a href="{{ post.url | relative_url }}">
+      <article>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.excerpt }}</p>
+      </article>
+    </a>
+  </div>
+  {% endfor %}
+
+</section>

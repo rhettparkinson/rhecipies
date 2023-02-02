@@ -18,6 +18,8 @@ defaults:
     values:
       layout: "default"
 
+exclude: [README.md]
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

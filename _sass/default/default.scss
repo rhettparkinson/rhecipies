@@ -266,10 +266,14 @@ body.fade-out #nav.hidden {
     }
 
     a {
+      cursor: pointer;
+      
       svg {
         display: inline-block;
         width: 24px;
         height: 24px;
+        position: relative;
+        top: -1px;
       }
     }
   }

@@ -2,4 +2,4 @@
 short_name: asian
 name: Asian-inspired
 ---
-Korean and Chinese recipies feature heavily here.
+Lots of Korean and Chinese stuff.

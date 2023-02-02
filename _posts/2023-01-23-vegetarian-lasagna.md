@@ -2,9 +2,9 @@
 layout: post
 cuisine: italian
 preptime: 90 mins
+image: /assets/images/test-signal.webp
+excerpt: Probably not something you'll be bothered to make all that often but honestly, who doesn't love a comforting, cheesy lasagna!
 ---
-
-Who doesn't love a comforting, cheesy lasagna!
 
 {% ingredient %}
 - 12 lasagna noodles

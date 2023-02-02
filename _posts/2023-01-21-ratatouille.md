@@ -2,9 +2,9 @@
 layout: post
 cuisine: french
 preptime: 45 mins
+image: /assets/images/test-signal.webp
+excerpt: This recipe is a great way to use up a variety of summer vegetables, and it's a delicious and healthy dish that is easy to make.
 ---
-
-This recipe is a great way to use up a variety of summer vegetables, and it's a delicious and healthy dish that is easy to make.
 
 {% ingredient %}
 - 2 eggplants, diced

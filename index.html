@@ -3,20 +3,24 @@ layout: default
 title: Cuisine
 ---
 
-<header>
-  <h1>{{ page.title }}</h1>
-  <p>Browse recipies based on cuisine/type.</p>
-</header>
+<section class="container">
 
-{% for cuisine in site.cuisines %}
-<div class="card">
-  <a href="{{ cuisine.url | relative_url }}">
-    <article>
-      <h2>
-        {{ cuisine.name }}
-      </h2>
-      <p>{{ cuisine.content | markdownify | strip_html | strip_newlines | escape_once }}</p>
-    </article>
-  </a>
-</div>
-{% endfor %}
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p>Browse recipies based on cuisine/type.</p>
+  </header>
+
+  {% for cuisine in site.cuisines %}
+  <div class="card">
+    <a href="{{ cuisine.url | relative_url }}">
+      <article>
+        <h2>
+          {{ cuisine.name }}
+        </h2>
+        <p>{{ cuisine.content | markdownify | strip_html | strip_newlines | escape_once }}</p>
+      </article>
+    </a>
+  </div>
+  {% endfor %}
+
+</section>

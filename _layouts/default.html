@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,16 +18,14 @@
     {% include navigation.html %}
 
     <div id="transition-wrapper">
-      <main>
-        <section class="container">
+      <main>        
           {{ content }}
-        </section>
-        
       </main>
     </div>
 
     <button class="contrast switcher" aria-label="Turn on dark mode"><i>Turn on dark mode</i></button>
 
+    <script defer src="https://unpkg.com/alpinejs@3.11.1/dist/cdn.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/main.js"></script>
     {% if jekyll.environment == "production" %}
     <script src="my-analytics-script.js"></script>

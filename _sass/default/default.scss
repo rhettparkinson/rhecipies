@@ -21,7 +21,7 @@ b, strong {
 
 main {
 
-  p {
+  address, blockquote, dl, figure, form, ol, p, pre, table, ul {
     
     @media screen and (max-width: 480px) {
       font-size: 14px;
@@ -100,6 +100,8 @@ main {
     font-size: 0.875rem;
     white-space: nowrap;
     vertical-align: middle;
+    position: relative;
+    top: -0.033em;
   }
 
   &:focus,
@@ -323,7 +325,7 @@ main {
         margin-bottom: 0;
       }
 
-      > *:last-of-type {
+      p {
         margin-bottom: 0;
         padding-bottom: 0;
       }
@@ -385,7 +387,7 @@ main {
 footer,
 header,
 main > section {
-  --block-spacing-vertical: 2rem;
+  --block-spacing-vertical: 4rem;
   margin: 0;
   padding: var(--block-spacing-vertical) 0;
 }
@@ -393,14 +395,14 @@ main > section {
   footer,
   header,
   main > section {
-    --block-spacing-vertical: 3rem;
+    --block-spacing-vertical: 4rem;
   }
 }
 @media (min-width: 768px) {
   footer,
   header,
   main > section {
-    --block-spacing-vertical: 4rem;
+    --block-spacing-vertical: 5rem;
   }
 }
 @media (min-width: 992px) {

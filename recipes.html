@@ -3,20 +3,24 @@ layout: default
 title: Recipes
 ---
 
-{% for post in site.posts %} {% assign cuisine = site.cuisines | where:
-"short_name", post.cuisine | first %}
-<div class="card">
-  <div class="meta">
-    <small>
-      <a href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
-    </small>
-  </div>
-  <a href="{{ post.url | relative_url }}">
-    <article>
-      <h2>{{ post.title }}</h2>
-      {{ post.excerpt }}
-    </article>
-  </a>
-</div>
+<section class="container">
 
-{% endfor %}
+  {% for post in site.posts %} {% assign cuisine = site.cuisines | where:
+    "short_name", post.cuisine | first %}
+    <div class="card">
+      <div class="meta">
+        <small>
+          <a href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
+        </small>
+      </div>
+      <a href="{{ post.url | relative_url }}">
+        <article>
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.excerpt }}</p>
+        </article>
+      </a>
+    </div>
+    
+    {% endfor %}
+    
+</section>

@@ -267,7 +267,7 @@ body.fade-out #nav.hidden {
 
     a {
       cursor: pointer;
-      
+
       svg {
         display: inline-block;
         width: 24px;
@@ -280,6 +280,9 @@ body.fade-out #nav.hidden {
 
   .nav__brand {
 
+    @media screen and (min-width: 576px) {
+      margin-left: calc(var(--nav-element-spacing-horizontal)*-1);
+    }
   }
 
   .nav__items {

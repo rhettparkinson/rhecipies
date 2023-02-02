@@ -8,10 +8,10 @@ title: Recipes
 <div class="card">
   <div class="meta">
     <small>
-      <a href="{{ cuisine.url }}">{{ cuisine.name }}</a>
+      <a href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
     </small>
   </div>
-  <a href="{{ post.url }}">
+  <a href="{{ post.url | relative_url }}">
     <article>
       <h2>{{ post.title }}</h2>
       {{ post.excerpt }}

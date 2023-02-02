@@ -10,7 +10,7 @@ title: Cuisine
 
 {% for cuisine in site.cuisines %}
 <div class="card">
-  <a href="{{ cuisine.url }}">
+  <a href="{{ cuisine.url | relative_url }}">
     <article>
       <h2>
         {{ cuisine.name }}

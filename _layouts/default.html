@@ -6,7 +6,7 @@
     <title>Rhettcipies | {{ page.title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <!-- custom Liquid variable that contains the correct base URL for your site -->
     {% if site.github.pages_hostname %}
       {% assign base_url = "https://{{ site.github.pages_hostname }}" %}

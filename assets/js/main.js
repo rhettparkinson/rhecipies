@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelector("button").addEventListener("touchstart", function(){
     this.blur();
-  });
+  }, {passive: true});
 
   // --------------------
   // Hide/show navbar

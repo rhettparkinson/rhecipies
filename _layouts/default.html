@@ -11,11 +11,12 @@
       rel="stylesheet"
       href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
     />
-    {% if site.github.hostname %}
-  {% assign base_url = "https://{{ site.github.hostname }}" %}
-{% else %}
-  {% assign base_url = "" %}
-{% endif %}
+    <!-- custom Liquid variable that contains the correct base URL for your site -->
+    {% if site.github.pages_hostname %}
+      {% assign base_url = "https://{{ site.github.pages_hostname }}" %}
+     {% else %}
+      {% assign base_url = "" %}
+    {% endif %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
     {% seo %}
   </head>

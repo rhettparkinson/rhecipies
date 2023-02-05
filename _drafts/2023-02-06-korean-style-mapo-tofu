@@ -1,0 +1,39 @@
+---
+layout: post
+cuisine: asian
+preptime: 30 mins
+image: /assets/images/test-signal.webp
+excerpt: Original recipe by maangchi.com
+---
+
+{% ingredient %}
+3 tablespoons vegetable oil
+4 garlic, minced
+1 teaspoon peeled ginger, minced
+8 ounces pork shoulder (or chicken or beef), cut into ½ inch cubes
+1 teaspoon kosher salt
+½ teaspoon ground black pepper
+1 tablespoon hot pepper flakes (gochugaru)
+1 medium onion (about 1 cup), cut into ½ inch chunks
+2 mild green chili peppers (or ½ of green bell pepper), chopped
+8 green onions, cut into ½ inch pieces
+1¼ cup unsalted chicken or beef stock (or vegetable stock)
+2 tablespoons hot pepper paste
+1 tablespoon soy sauce
+1 pound tofu, cut into ½ inch cubes
+1 tablespoon potato starch
+1 teaspoon toasted sesame oil
+{% endingredient %}
+
+{% method %}
+Heat up a large skillet or a pan over medium high heat. Add vegetable oil, garlic, and ginger, stirring with a wooden spoon for 1 to 2 minutes until the garlic turns light brown and crispy and the oil smells fragrant.
+Add the pork, kosher salt, and ground black pepper, and cook for about 2 minutes, stirring with the wooden spoon until the pork turns a little crunchy.
+Stir in hot pepper flakes for about 30 seconds until it bubbles and smells a little smoky.
+Add the onion, green chili pepper, and green onion. Stir for 1 minute until the vegetables turn slightly withered.
+Stir in soy sauce and hot pepper paste.
+Add 1 cup chicken broth and cook for about 2 minutes until vigorously boiling.
+Add the tofu cubes and gently mix with a wooden spoon, careful not to break up the tofu. Cook for about 3 to 4 minutes until the tofu turns soft.
+While the tofu is cooking, combine the rest of the ¼ cup chicken broth and potato starch in a small bowl and mix it well. Add it to the boiling mapo tofu and gently stir it in with a wooden spoon to thicken the sauce.
+Remove from the heat and stir in the sesame oil.
+Transfer to a large shallow bowl. Serve with rice, kimchi, and a few more side dishes.
+{% endmethod %}

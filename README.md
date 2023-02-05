@@ -1,4 +1,4 @@
-# rhettcipies
+# Rhecipies
 A place for all my recipies online, built with Jekyll static-site generator.
 
 ## Project setup

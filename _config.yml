@@ -1,6 +1,12 @@
 collections:
+  posts:
+    output          : true
+    permalink       : /:collection/:title
+    directory       : _posts
   cuisines:
-    output: true
+    output          : true
+    permalink       : /:collection/:title
+    directory       : _cuisines
 
 defaults:
   - scope:
@@ -18,7 +24,7 @@ defaults:
     values:
       layout: "default"
 
-exclude: [README.md]
+exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "README.md"]
 
 plugins:
   - jekyll-sitemap

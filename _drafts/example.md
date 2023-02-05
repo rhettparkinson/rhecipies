@@ -7,7 +7,7 @@ excerpt:
 ---
 
 {% ingredient %}
-{% endingredient %{
+{% endingredient %}
 
 {% method %}
 {% endmethod %}

@@ -1,0 +1,32 @@
+---
+layout: post
+cuisine: indian
+preptime: 45 mins
+image: /assets/images/test-signal.webp
+excerpt: Spiced, battered, deep-fried vegetable fritters. You can use any vegetables you like but I like broccoli and cauliflower the best.
+notes: Cook pakoras slowly to ensure the vegetables cook through, no need to pre-cook them.
+---
+
+{% ingredient %}
+- 1/2 cup chickpea flour
+- 1/2 cup plain flour
+- 1/2 cup self-raising flour
+- 1 1/2 tsp salt
+- 1 tsp asafoetida
+- 1 tsp tumeric
+- 1 tsp cayenne pepper
+- 1 tsp ground coriander
+- 1 jalapeño chilli, seeded and chopped
+- 2 cups water (or enough to make a smooth batter)
+- bite-sized vegetable pieces
+- ghee or oil for deep-frying
+{% endingredient %}
+
+{% method %}
+- Combine the flour, salt, spices and chilli in a bowl and mix to combine.
+- Slowly add the water, mixing with a fork or whisk until it gets a creamy texture.
+- Let the batter site for at least 10 minutes. When you dip the vegetables they should be completely coated, so adjust the batter if necessary.
+- Heat enough oil for deep-frying, dip some vegetables in the batter and add them to the oil, frying them in batches.
+- Fry until golden brown, turning them as necessary. Remove and drain on some paper towel. 
+- Eat them warm with with your sauce or chutney of choice. Also good cold without any condiments lol.
+{% endmethod %}

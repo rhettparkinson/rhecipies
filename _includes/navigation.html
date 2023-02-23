@@ -2,7 +2,7 @@
   <article>
     <nav class="mobileNav__items">
       {% for item in site.data.navigation %}
-        <a class="mobileNav__item" href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
+        <a class="mobileNav__item" href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
       {% endfor %}
     </nav>
   </article>

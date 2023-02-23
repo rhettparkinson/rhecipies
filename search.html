@@ -9,17 +9,22 @@ title: Search
     <h1>{{ page.title }}</h1>
   </header>
   
-  <form>
+  <form id="search-form">
     <div>
       <input
         type="text"
         id="search-input"
         placeholder="Type something in...">
-      <div id="results-container"></div>
+      <div id="search-results"></div>
     </div>
     <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
     <script>
-      var sjs = SimpleJekyllSearch({searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('results-container'), json: '/search.json', searchResultTemplate: '<div class="card"><a href="{{site.baseurl}}{url}"><article><h2>{title}</h2><p>{desc}</p></article></a></div>'})
+      var sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('search-results'),
+        json: '/search.json',
+        searchResultTemplate: '<div class="card"><a href="{{site.baseurl}}{url}"><article><div class="meta"><span>{cuisine}</span></div><h2>{title}</h2><p>{desc}</p></article></a></div>'
+      })
     </script>
   </form>
 

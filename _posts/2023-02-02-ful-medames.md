@@ -2,7 +2,7 @@
 layout: post
 cuisine: middle-eastern
 preptime: 30 mins
-image: /assets/images/test-signal.webp
+image: /assets/images/ful-medames-topped-with-chopped-parsely-tomatoes-radishes-sumac-olive-oil.webp
 excerpt: Warm and comforting, ful is a blend of creamy mashed fava beans seasoned with aromatic spices, topped with fresh, bright ingredients.
 ---
 

@@ -6,29 +6,33 @@ layout: default
 
   <header class="recipe__header grid">
     <div class="recipe__description">
-      {% assign cuisine = site.cuisines | where: 'short_name', page.cuisine |
-      first %} {% if cuisine %}
-      <div class="meta">
-        <small>
-          <a href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
-        </small>
-      </div>
-      {% endif %}
-      <h1>{{ page.title }}</h1>
-      <p>{{ page.excerpt }}</p>
+      <div class="container">
+        {% assign cuisine = site.cuisines | where: 'short_name', page.cuisine | first %}
+        {% if cuisine %}
+        <div class="meta">
+          <small>
+            <a href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
+          </small>
+        </div>
+        {% endif %}
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.excerpt }}</p>
+    </div>
     </div>
     <div class="recipe__image">
-      <img
-        src="{{ page.image | prepend: site.baseurl }}"
-        alt="{{ page.title }}"
-        title="{{ page.title }}"
-        width="1600"
-        height="1200"
-      />
+      <div class="recipe__imageWrapper">
+        <img
+          src="{{ page.image | prepend: site.baseurl }}"
+          alt="{{ page.title }}"
+          title="{{ page.title }}"
+          width="1600"
+          height="1200"
+        />
+      </div>
     </div>
   </header>
 
-  <article x-data="{ ingredients: true, method: false, activeButton: 1 }" @resize.window="width = (window.innerWidth > 0) ? window.innerWidth : screen.width; if (width > 992) { ingredients = true, method = true } else { ingredients = true, method = false, activeButton = 1 }">
+  <article x-data="{ ingredients: true, method: (window.innerWidth > 992), activeButton: (window.innerWidth > 992 ? 2 : 1) }" @resize.window="width = (window.innerWidth > 0) ? window.innerWidth : screen.width; if (width > 992) { ingredients = true, method = true, activeButton = 2 } else { ingredients = true, method = false, activeButton = 1 }">
     <div class="recipe__toggle">
       <button @click="ingredients = true; method = false; activeButton = 1" :class="{ 'active': activeButton === 1 }">Ingredients</button>
       <button @click="ingredients = false; method = true; activeButton = 2" :class="{ 'active': activeButton === 2 }">Method</button>

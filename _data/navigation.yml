@@ -1,4 +1,4 @@
-- name: View recipies
+- name: Browse recipies
   link: /recipes.html
 - name: Submit a link
   link: /submit.html

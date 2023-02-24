@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% comment %}
+https://jameshfisher.com/2019/05/05/how-can-i-add-tags-to-a-jekyll-blog/
+{% endcomment %}<section class="container">
+
+  <header>
+    <h1>Tag: {{ page.tag | capitalize }}</h1>
+  </header>
+
+  {% for post in site.posts %}
+    {% if post.tags contains page.tag %}
+      <div class="card">
+        <a href="{{ post.url | relative_url }}">
+          <article>
+            <div class="meta">
+              <span>{{ post.cuisine | capitalize }}</span>
+            </div>
+            <h2>{{- post.title -}}</h2>
+            <p>{{ post.excerpt }}</p>
+          </article>
+        </a>
+      </div>
+
+    {% endif %}
+  {% endfor %}
+
+</section>

@@ -25,7 +25,7 @@
   --transition: 0.2s ease-in-out;
   --modal-overlay-backdrop-filter: blur(0.25rem);
 
-  --primary-color: #0B8911; /* "Green Pigment" */
+  --primary-color: #080; /* "Green" */
   --secondary-color: #808782; /* Battleship Grey */
   --black: #222222; /* Eerie Black */
   --black-focus: #444444;
@@ -80,7 +80,7 @@
   --form-element-invalid-active-border-color: #d32f2f;
   --form-element-invalid-focus-color: rgba(211, 47, 47, 0.125);
   --form-element-valid-border-color: #388e3c;
-  --form-element-valid-active-border-color: #0B8911;
+  --form-element-valid-active-border-color: #080;
   --form-element-valid-focus-color: rgba(67, 160, 71, 0.125);
   --switch-background-color: hsl(205deg, 16%, 77%);
   --switch-color: var(--primary-inverse);

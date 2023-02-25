@@ -322,7 +322,10 @@ main {
       }      
 
       h1 {
+        line-height: 1em;
+        margin-top: calc(var(--typography-spacing-vertical)*.25);
         margin-bottom: 0;
+        padding-bottom: calc(var(--typography-spacing-vertical)*.5);
       }
 
       p {
@@ -339,6 +342,7 @@ main {
 
     h2 {
       margin-bottom: 0;
+      padding-bottom: 1rem;
     }
 
     p {
@@ -352,7 +356,6 @@ main {
 }
 
 .meta {
-  margin-bottom: calc(var(--typography-spacing-vertical) / 2);
 
   small {
     display: inline-block;
@@ -366,34 +369,6 @@ main {
       border-radius: var(--border-radius);
       text-decoration: none;
     }
-  }
-}
-
-.current-page .card.animate {
-  opacity: 1;
-  transform: none;
-  transition-delay: 0.1s;
-}
-
-.fade-out .card {
-  transform: none;
-}
-
-.card {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-
-  a {
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-    }
-  }
-
-  article {
-    margin-top: 0;
   }
 }
 

@@ -4,28 +4,41 @@ title: Search
 ---
 
 <section class="container">
-
   <header>
     <h1>{{ page.title }}</h1>
   </header>
-  
+
   <form id="search-form">
     <div>
-      <input
-        type="text"
-        id="search-input"
-        placeholder="Type something in...">
+      <input type="text" id="search-input" placeholder="Type something in..." />
       <div id="search-results"></div>
     </div>
     <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
     <script>
+      // Define the function to apply the animation to the search results
+      function animateSearchResults() {
+        var cards = document.querySelectorAll(".card");
+        var delay = 0;
+        cards.forEach(function (card, index) {
+          setTimeout(function () {
+            card.classList.add("animate");
+          }, index * 100); // Stagger the animations by 100ms
+        });
+      }
+
+      // Initialize the search plugin
       var sjs = SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('search-results'),
-        json: '/search.json',
-        searchResultTemplate: '<div class="card"><a href="{{site.baseurl}}{url}"><article><div class="meta"><span>{cuisine}</span></div><h2>{title}</h2><p>{desc}</p></article></a></div>'
-      })
+        searchInput: document.getElementById("search-input"),
+        resultsContainer: document.getElementById("search-results"),
+        json: "/search.json",
+        searchResultTemplate:
+          '<div class="card"><a href="{{site.baseurl}}{url}"><article><div class="meta"><span>{cuisine}</span></div><h2>{title}</h2><p>{desc}</p></article></a></div>',
+      });
+
+      // Add an event listener to the search results container to detect when new results are added
+      document
+        .getElementById("search-results")
+        .addEventListener("DOMNodeInserted", animateSearchResults);
     </script>
   </form>
-
 </section>

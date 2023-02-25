@@ -14,7 +14,10 @@
      {% else %}
       {% assign base_url = "" %}
     {% endif %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+    <link rel="preload" href="{{ site.baseurl }}/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+    </noscript>
     {% seo %}
   </head>
   <body data-page-layout="{{ page.layout }}">
@@ -29,9 +32,9 @@
     <button class="contrast switcher" aria-label="Turn on dark mode"><i>Turn on dark mode</i></button>
 
     <script defer src="https://unpkg.com/alpinejs@3.11.1/dist/cdn.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+    <script defer src="{{ site.baseurl }}/assets/js/main.js"></script>
     {% if jekyll.environment == "production" %}
-    <script src="my-analytics-script.js"></script>
+    <!-- <script src="my-analytics-script.js"></script> -->
     {% endif %}
   </body>
 </html>

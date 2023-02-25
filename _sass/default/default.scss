@@ -156,7 +156,7 @@ main {
   .mobileNav__item {
     margin: 0;
     text-align: center;
-    border-bottom: solid 1px var(--muted-border-color);
+    border-bottom: solid 2px var(--muted-border-color);
   }
 }
 
@@ -179,7 +179,7 @@ body.fade-out #nav.hidden {
 
   nav {
     background-color: var(--background-color);
-    box-shadow: 0 1px 0 var(--muted-border-color);
+    box-shadow: 0 2px 0 var(--muted-border-color);
     justify-content: space-between;
   }
 
@@ -322,7 +322,10 @@ main {
       }      
 
       h1 {
+        line-height: 1em;
+        margin-top: calc(var(--typography-spacing-vertical)*.25);
         margin-bottom: 0;
+        padding-bottom: calc(var(--typography-spacing-vertical)*.5);
       }
 
       p {
@@ -339,6 +342,7 @@ main {
 
     h2 {
       margin-bottom: 0;
+      padding-bottom: 1rem;
     }
 
     p {
@@ -352,13 +356,11 @@ main {
 }
 
 .meta {
-  margin-bottom: calc(var(--block-spacing-vertical) / 4);
 
   small {
     display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     margin-bottom: 0;
+    text-transform: capitalize;
 
     a {
       background-color: var(--primary);
@@ -367,20 +369,6 @@ main {
       border-radius: var(--border-radius);
       text-decoration: none;
     }
-  }
-}
-
-.card {
-  a {
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-    }
-  }
-
-  article {
-    margin-top: 0;
   }
 }
 

@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add 'current-page' class to the body element
   setTimeout(function() {
     document.body.classList.add('current-page');
+    // Trigger card animations
+    document.querySelectorAll('.card').forEach(function(card, index) {
+      setTimeout(function() {
+        card.classList.add('animate');
+      }, index * 100); // Stagger the animations by 100ms
+    });
   }, 100);
 
   // Add click event listener to all anchor elements
@@ -70,9 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
     this.blur();
   }, {passive: true});
 
-  // --------------------
+  // ----------------
   // Hide/show navbar
-  // --------------------
+  // ----------------
 
   if (document.getElementById("nav")) {
     var navigation = document.getElementById("nav");
@@ -93,11 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
       navigation.classList.remove("hidden");
     });
   }
-
-  
-
-// The End
-
 });
 
 /*

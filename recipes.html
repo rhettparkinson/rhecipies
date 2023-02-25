@@ -8,13 +8,11 @@ title: Recipes
   {% for post in site.posts %} {% assign cuisine = site.cuisines | where:
     "short_name", post.cuisine | first %}
     <div class="card">
-      <div class="meta">
-        <small>
-          <a href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
-        </small>
-      </div>
       <a href="{{ post.url | relative_url }}">
         <article>
+          <div class="meta">
+            <span>{{ cuisine.name }}</span>
+          </div>
           <h2>{{ post.title }}</h2>
           <p>{{ post.excerpt }}</p>
         </article>

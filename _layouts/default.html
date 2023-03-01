@@ -14,10 +14,11 @@
      {% else %}
       {% assign base_url = "" %}
     {% endif %}
-    <link rel="preload" href="{{ site.baseurl }}/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+    <!-- <link rel="preload" href="{{ site.baseurl }}/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
       <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
-    </noscript>
+    </noscript> -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
     {% seo %}
   </head>
   <body data-page-layout="{{ page.layout }}">

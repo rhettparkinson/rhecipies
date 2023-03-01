@@ -1,7 +1,7 @@
 ---
 layout: post
 cuisine: spanish
-tags: noodles
+tags: comforting
 preptime: 45 mins
 image: /assets/images/test-signal.webp
 excerpt: Originating in the southern Spanish province of Granada, this chickpea stew is distinct from others due to its unique thickener of egg and croutons.

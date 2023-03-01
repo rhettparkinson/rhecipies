@@ -4,7 +4,7 @@ cuisine: rest-of-europe
 tags: comforting
 preptime: 30 mins
 image: /assets/images/test-signal.webp
-excerpt: A traditional Polish soup made with sour pickles and vegetables, creating a tangy and hearty dish that is perfect for cold weather.
+excerpt: A traditional Polish soup (zoo-pah oh-goor-koh-vah) made with sour pickles and vegetables, makes for a tangy and hearty dish that is perfect for cold weather.
 ---
 
 {% ingredient %}

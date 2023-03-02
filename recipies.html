@@ -1,0 +1,36 @@
+---
+layout: default
+title: Browse recipes
+---
+
+<section class="container-fluid">
+  <div class="masonry">
+    {% for post in site.posts %} {% assign cuisine = site.cuisines | where:
+    "short_name", post.cuisine | first %}
+    <div class="card masonry__item">
+      <a href="{{ post.url | relative_url }}">
+        <article>
+          {% if post.image %}
+          <div class="card__image">
+            <img
+              src="{{ post.image | prepend: site.baseurl }}"
+              alt="{{ post.title }}"
+              title="{{ post.title }}"
+            />
+          </div>
+          {% endif %}
+          <div class="meta">
+            <small>
+              <span style="color: #{{ cuisine.color }}"
+                >{{ cuisine.name }}</span
+              >
+            </small>
+          </div>
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.excerpt }}</p>
+        </article>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>

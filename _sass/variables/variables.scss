@@ -376,7 +376,7 @@ progress,
 }
 @media (min-width: 1200px) {
   :root {
-    --font-size: 21px;
+    --font-size: 20px;
   }
 }
 
@@ -461,6 +461,7 @@ a.contrast {
 
 small {
   --font-size: 0.75em;
+  line-height: 1.25em;
 }
 
 h1,

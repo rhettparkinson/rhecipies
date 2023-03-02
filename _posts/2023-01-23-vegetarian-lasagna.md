@@ -3,7 +3,6 @@ layout: post
 cuisine: italian
 tags: comforting
 preptime: 90 mins
-image: /assets/images/test-signal.webp
 excerpt: Probably not something you'll be bothered to make all that often but honestly, who doesn't love a comforting, cheesy lasagna!
 ---
 

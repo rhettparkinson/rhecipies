@@ -3,7 +3,6 @@ layout: post
 cuisine: rest-of-europe
 tags: healthy
 preptime: 15 mins
-image: /assets/images/test-signal.webp
 excerpt: Tangy and crunchy, it's awesome in sandwiches, tacos, salads, or as a side.
 ---
 

@@ -3,8 +3,7 @@ layout: post
 cuisine: rest-of-europe
 tags: dessert
 preptime: 30 mins
-image: /assets/images/test-signal.webp
-excerpt: A never-fail recipe, this may be one of the first things I ever learned to prepare. So simple, so good.
+excerpt: An old-fashioned "never fail" dessert recipe that comes together with minimal effort.
 ---
 
 {% ingredient %}

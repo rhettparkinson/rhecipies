@@ -7,17 +7,17 @@ title: Cuisines
 
   <header>
     <h1>{{ page.title }}</h1>
-    <p>Browse recipies based on vaguely defined geographic regions.</p>
+    <p>Browse recipies based on loosely defined geographic regions.</p>
   </header>
 
   {% for cuisine in site.cuisines %}
   <div class="card">
     <a href="{{ cuisine.url | relative_url }}">
-      <article>
+      <article style="background-color: #{{ cuisine.color }}">
         <h2>
           {{ cuisine.name }}
         </h2>
-        <p>{{ cuisine.content | markdownify | strip_html | strip_newlines | escape_once }}</p>
+        <!-- <p>{{ cuisine.content | markdownify | strip_html | strip_newlines | escape_once }}</p> -->
       </article>
     </a>
   </div>

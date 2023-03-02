@@ -16,7 +16,16 @@ https://jameshfisher.com/2019/05/05/how-can-i-add-tags-to-a-jekyll-blog/
         <a href="{{ post.url | relative_url }}">
           <article>
             <div class="meta">
-              <span>{{ post.cuisine | capitalize }}</span>
+              {% assign cuisine = site.cuisines | where: 'short_name', post.cuisine
+              | first %} {% if cuisine %}
+              <small>
+                <span style="color: #{{ cuisine.color }}">{{ cuisine.name }}</span>
+              </small>
+              {% endif %} {% if post.tags %} {% for tag in post.tags %}
+              <small>
+                <span>{{ tag }}</span>
+              </small>
+              {% endfor %} {% endif %}
             </div>
             <h2>{{- post.title -}}</h2>
             <p>{{ post.excerpt }}</p>

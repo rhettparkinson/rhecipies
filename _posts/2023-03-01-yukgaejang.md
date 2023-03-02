@@ -3,8 +3,7 @@ layout: post
 cuisine: asian
 tags: spicy
 preptime: 30 mins
-image: /assets/images/test-signal.webp
-excerpt: This Korean stew is hearty and flavorful, made with shredded vegetables, mushrooms, and your protein-of-choice, all simmered together in a spicy and savory broth.
+excerpt: This hearty Korean stew is made with your choice of protein, vegetables, and shiitake, all simmered together in a spicy and savory broth.
 ---
 
 {% ingredient %}

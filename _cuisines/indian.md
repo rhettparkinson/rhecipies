@@ -1,6 +1,6 @@
 ---
-short_name: spanish
-name: Spanish
-color: ea580c # orange-600
+short_name: indian
+name: Indian
+color: db2777 # pink-600
 ---
 Roman, Moorish, Jewish, and Mediterranean influences equals winning.

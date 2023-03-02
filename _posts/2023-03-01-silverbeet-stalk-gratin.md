@@ -3,7 +3,6 @@ layout: post
 cuisine: french
 tags: comforting
 preptime: 45 mins
-image: /assets/images/test-signal.webp
 excerpt: This dish is so good you'll find yourself buying silverbeet just for the stalks!
 ---
 

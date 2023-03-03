@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ site.title }} | {{ page.title }}</title>
+    <title>{{ site.title }} | {{ page.title | strip_html }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,400;0,600;1,400&display=swap" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,400;0,600;1,400&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,600;0,900;1,500&family=Spline+Sans+Mono:ital,wght@0,400;0,600;1,400&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,600;0,900;1,500&family=Spline+Sans+Mono:ital,wght@0,400;0,600;1,400&display=swap"></noscript>
     <!-- custom Liquid variable that contains the correct base URL for your site -->
     {% if site.github.pages_hostname %}
       {% assign base_url = "https://{{ site.github.pages_hostname }}" %}
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
     {% seo %}
   </head>
-  <body class="{{ page.title | downcase | replace: ' ', '-' }}" data-page-layout="{{ page.layout }}">
+  <body class="{{ page.title | downcase | replace: ' ', '-' }}"" data-page-layout="{{ page.layout }}">
     {% include navigation.html %}
 
     <div id="transition-wrapper">

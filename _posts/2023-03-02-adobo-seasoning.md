@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Adobo <br>All-Purpose Seasoning
 cuisine: latin-american
 tags: condiments
 preptime: 5 mins

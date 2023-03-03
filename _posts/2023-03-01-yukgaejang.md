@@ -1,9 +1,10 @@
 ---
 layout: post
+title: Korean-Style Spicy "Beef" & Vegetable Stew
 cuisine: asian
 tags: spicy
 preptime: 30 mins
-excerpt: This hearty Korean stew is made with your choice of protein, vegetables, and shiitake, all simmered together in a spicy and savory broth.
+excerpt: Yukgaejang is a hearty Korean stew is made with your choice of protein, vegetables, and shiitake, all simmered together in a spicy and savory broth.
 ---
 
 {% ingredient %}

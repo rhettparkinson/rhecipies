@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Summer Pasta With Cherry Tomatoes & Black Olives
 cuisine: italian
 tags: healthy
 preptime: 30 mins

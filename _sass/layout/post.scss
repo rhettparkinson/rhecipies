@@ -155,7 +155,7 @@
       content: "Step " counter(step) ".";
       display: block;
       color: var(--h4-color);
-      margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
+      margin-bottom: calc(var(--typography-spacing-vertical) * 0.5);
     }
   }
 }

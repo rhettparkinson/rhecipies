@@ -1,9 +1,10 @@
 ---
 layout: post
-cuisine: rest-of-europe
+title: Chocolate Self-Saucing Pudding
+cuisine: rest-of-world
 tags: dessert
 preptime: 30 mins
-excerpt: An old-fashioned "never fail" dessert recipe that comes together with minimal effort.
+excerpt: An old-fashioned "never fail" dessert recipe that comes together with minimal effort. Can easily be a 'mocha' pudding with the addition of coffee.
 ---
 
 {% ingredient %}

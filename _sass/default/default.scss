@@ -331,7 +331,7 @@ main {
 
       h1 {
         line-height: 1em;
-        margin-top: calc(var(--typography-spacing-vertical) * 0.25);
+        margin-top: calc(var(--typography-spacing-vertical) * 0.5);
         margin-bottom: 0;
         padding-bottom: calc(var(--typography-spacing-vertical) * 0.5);
       }
@@ -380,7 +380,9 @@ main {
   }
   
   @media screen and (min-width: 2000px) {
-    column-count: 4;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

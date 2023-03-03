@@ -14,7 +14,7 @@ title: Browse recipes
           <div class="card__image">
             <img
               src="{{ post.image | prepend: site.baseurl }}"
-              alt="{{ post.title }}"
+              alt="{{ post.title | strip_html }}"
               title="{{ post.title }}"
             />
           </div>
@@ -26,7 +26,17 @@ title: Browse recipes
               >
             </small>
           </div>
-          <h2>{{ post.title }}</h2>
+          {% comment %}
+          Prevent orphaned words in titles
+          {% endcomment %}
+          {% assign words = post.title | split: " " %} {% assign last_word_index
+          = words | size | minus: 1 %} {% assign words_except_last = words |
+          slice: 0, last_word_index %} {% assign last_word = words | last %}
+          <h2>
+            {{ words_except_last | join: " " | strip_html }}&nbsp;{{ last_word
+            }}
+          </h2>
+
           <p>{{ post.excerpt }}</p>
         </article>
       </a>

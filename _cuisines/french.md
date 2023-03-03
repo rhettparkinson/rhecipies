@@ -1,5 +1,5 @@
 ---
 short_name: french
 name: French
-color: 2563eb # blue-600
+color: 3b82f6 # blue-500
 ---

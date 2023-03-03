@@ -1,0 +1,78 @@
+/* dark-mode toggle */
+
+.switcher {
+  position: fixed;
+  z-index: 1000;
+  right: calc(var(--spacing) / 2 + var(--scrollbar-width, 0px));
+  bottom: var(--spacing);
+  width: auto;
+  margin-bottom: 0;
+  padding: 0.75rem;
+  border-radius: 2rem;
+  box-shadow: var(--card-box-shadow);
+  line-height: 1;
+  text-align: right;
+
+  @media (min-width: 576px) {
+    right: calc(var(--spacing) + var(--scrollbar-width, 0px));
+  }
+
+  &::after {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 0.15rem solid currentColor;
+    border-radius: 50%;
+    background: linear-gradient(
+      to right,
+      currentColor 0,
+      currentColor 50%,
+      transparent 50%
+    );
+    content: "";
+    vertical-align: bottom;
+    transition: transform var(--transition);
+  }
+
+  i {
+    display: inline-block;
+    max-width: 0;
+    padding: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    font-style: normal;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    vertical-align: middle;
+    position: relative;
+    top: -0.033em;
+  }
+
+  &:focus,
+  &:hover {
+    transition: background-color var(--transition),
+      border-color var(--transition), color var(--transition),
+      box-shadow var(--transition);
+  }
+
+  &.rotate {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover i {
+    transition: max-width var(--transition), padding var(--transition);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:focus,
+    &:hover {
+      max-width: 100%;
+    }
+    &:hover i {
+      max-width: 100%;
+      padding: 0 calc(var(--spacing) / 2) 0 calc(var(--spacing) / 4);
+    }
+  }
+}

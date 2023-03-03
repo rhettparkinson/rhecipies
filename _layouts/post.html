@@ -6,17 +6,21 @@ layout: default
   <header class="recipe__header grid">
     <div class="recipe__description">
       <div class="container">
-        <div class="meta">
+        <div class="pills">
           {% assign cuisine = site.cuisines | where: 'short_name', page.cuisine
-          | first %} {% if cuisine %}
-          <small>
-            <a  style="background-color: #{{ cuisine.color }}; border-color:  #{{ cuisine.color }};" href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
-          </small>
-          {% endif %} {% if page.tags %} {% for tag in page.tags %}
-          <small>
-            <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">{{ tag }}</a>
-          </small>
-          {% endfor %} {% endif %}
+           | first %}
+          {% if cuisine %}
+            <small>
+              <a style="background-color: #{{ cuisine.color }}; border-color:  #{{ cuisine.color }};" href="{{ cuisine.url | relative_url }}">{{ cuisine.name }}</a>
+            </small>
+          {% endif %}
+          {% if page.tags %}
+            {% for tag in page.tags %}
+              <small>
+                <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">{{ tag | capitalize }}</a>
+              </small>
+            {% endfor %}
+          {% endif %}
         </div>
         <h1>{{ page.title }}</h1>
         <p>{{ page.excerpt }}</p>
@@ -25,21 +29,20 @@ layout: default
     <div class="recipe__image">
       <div class="imageWrapper">
         {% if page.image %}
-        <img
-          src="{{ page.image | prepend: site.baseurl }}"
-          alt="{{ page.title }}"
-          title="{{ page.title }}"
-          width="1600"
-          height="1200"
-        />
-        {% else %} {% assign cuisine = page.cuisine | append: '.webp' %}
-        <img
-          src="{{ '/assets/images/' | append: cuisine }}"
-          alt="{{ page.title }}"
-          title="{{ page.title }}"
-          width="1600"
-          height="1200"
-        />
+          <img
+            src="{{ page.image | prepend: site.baseurl }}"
+            alt="{{ page.title }}"
+            title="{{ page.title }}"
+            width="1600"
+            height="1200" />
+        {% else %}
+          {% assign cuisine = page.cuisine | append: '.webp' %}
+          <img
+            src="{{ '/assets/images/' | append: cuisine }}"
+            alt="{{ page.title }}"
+            title="{{ page.title }}"
+            width="1600"
+            height="1200" />
         {% endif %}
       </div>
     </div>
@@ -48,19 +51,12 @@ layout: default
   <article
     class="grid recipe__instructions"
     x-data="{ ingredients: true, method: (window.innerWidth > 992), activeButton: (window.innerWidth > 992 ? 2 : 1) }"
-    @resize.window="width = (window.innerWidth > 0) ? window.innerWidth : screen.width; if (width > 992) { ingredients = true, method = true, activeButton = 2 } else { ingredients = true, method = false, activeButton = 1 }"
-  >
+    @resize.window="width = (window.innerWidth > 0) ? window.innerWidth : screen.width; if (width > 992) { ingredients = true, method = true, activeButton = 2 } else { ingredients = true, method = false, activeButton = 1 }">
     <div class="recipe__toggle">
-      <button
-        @click="ingredients = true; method = false; activeButton = 1"
-        :class="{ 'active': activeButton === 1 }"
-      >
+      <button @click="ingredients = true; method = false; activeButton = 1" :class="{ 'active': activeButton === 1 }">
         Ingredients
       </button>
-      <button
-        @click="ingredients = false; method = true; activeButton = 2"
-        :class="{ 'active': activeButton === 2 }"
-      >
+      <button @click="ingredients = false; method = true; activeButton = 2" :class="{ 'active': activeButton === 2 }">
         Method
       </button>
     </div>

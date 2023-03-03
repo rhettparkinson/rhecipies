@@ -1,5 +1,5 @@
 ---
 short_name: asian
 name: Asian
-color: c026d3 # fuchsia-600
+color: e879f9 # fuchsia-400
 ---

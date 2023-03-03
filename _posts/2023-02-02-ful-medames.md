@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Egyptian Fava Bean Mash With Toppings
+title: Egyptian Fava Bean Mash With Tahini
 cuisine: middle-eastern
 tags: comforting
 preptime: 30 mins

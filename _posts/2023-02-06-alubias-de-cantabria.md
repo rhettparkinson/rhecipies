@@ -4,7 +4,7 @@ title: Cantabrian-style Bean Stew
 cuisine: spanish
 tags: comforting
 preptime: 30 mins
-excerpt: Originating from the north of Spain, this rustic stew is seasoned paprika and cumin.
+excerpt: Originating from the north of Spain, this rustic stew is seasoned with paprika and cumin.
 ---
 
 {% ingredient %}

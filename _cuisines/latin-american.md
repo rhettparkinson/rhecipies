@@ -1,5 +1,5 @@
 ---
 short_name: latin-american
 name: Latin-American
-color: e11d48 # rose-600
+color: f43f5e # rose-500
 ---

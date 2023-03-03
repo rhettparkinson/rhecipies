@@ -26,6 +26,7 @@
   --modal-overlay-backdrop-filter: blur(0.25rem);
 
   --primary-color: #080; /* "Green" */
+  --primary-color-lighter: #0a0; /* Bright Green */
   --secondary-color: #808782; /* Battleship Grey */
   --black: #222222; /* Eerie Black */
   --black-focus: #444444;
@@ -45,7 +46,7 @@
   --h5-color: var(--secondary-color);
   --h6-color: var(--secondary-color);
   --muted-color: #aaa;
-  --muted-border-color: #eee;
+  --muted-border-color: #ddd;
   --primary: var(--primary-color);
   --primary-hover: var(--primary-color);
   --primary-focus: var(--background-focus);
@@ -151,9 +152,9 @@
     --h5-color: var(--secondary-color);
     --h6-color: var(--secondary-color);
     --muted-color: #666;
-    --muted-border-color: #2c2c2c;
-    --primary: var(--primary-color);
-    --primary-hover: var(--primary-color);
+    --muted-border-color: #555;
+    --primary: var(--primary-color-lighter);
+    --primary-hover: var(--primary-color-lighter);
     --primary-focus: var(--background-focus);
     --primary-inverse: var(--white);
     --secondary: var(--secondary-color);
@@ -257,10 +258,10 @@
   --h4-color: var(--secondary-color);
   --h5-color: var(--secondary-color);
   --h6-color: var(--secondary-color);
-  --muted-color: #666;
-  --muted-border-color: #2c2c2c;
-  --primary: var(--primary-color);
-  --primary-hover: var(--primary-color);
+  --muted-color: #222;
+  --muted-border-color: var(--black-focus);
+  --primary: var(--primary-color-lighter);
+  --primary-hover: var(--primary-color-lighter);
   --primary-focus: var(--background-focus);
   --primary-inverse: var(--white);
   --secondary: var(--secondary-color);
@@ -279,6 +280,8 @@
   --blockquote-footer-color: var(--muted-color);
   --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pill-background-color: #333;
+  --pill-border--color: var(--muted-border-color);
   --form-element-background-color: #2f2f2f;
   --form-element-border-color: #555555;
   --form-element-color: var(--color);
@@ -318,7 +321,7 @@
   --accordion-active-summary-color: var(--primary);
   --accordion-close-summary-color: var(--color);
   --accordion-open-summary-color: var(--muted-color);
-  --card-background-color: #2c2c2c;
+  --card-background-color: #2a2a2a;
   --card-border-color: var(--card-background-color);
   --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
     0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
@@ -475,13 +478,13 @@ h6 {
 }
 
 h1 {
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   --font-size: clamp(1.75rem, 1.1rem + 3.25vw, 5rem);
   --typography-spacing-vertical: 3rem;
 }
 
 h2 {
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   --font-size: 1.5rem;
   --typography-spacing-vertical: 2.625rem;
 }

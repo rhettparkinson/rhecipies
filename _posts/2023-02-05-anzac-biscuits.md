@@ -1,16 +1,17 @@
 ---
 layout: post
-cuisine: other
+cuisine: rest-of-world
+tags: desserts
 preptime: 30 mins
-image: /assets/images/test-signal.webp
-excerpt: 
+image: /assets/images/anzac-biscuits.webp
+excerpt: ANZAC biscuits are a traditional Australian and New Zealand sweet biscuit made with rolled oats, flour, coconut, sugar, butter, and golden syrup.
 ---
 
 {% ingredient %}
 - 1 cup rolled oats
 - 3/4 cup desiccated coconut
 - 1 cup plain flour
-- 1 1/2 tsp bicarbonate of soda
+- 1 1/2 tsp bicarb soda
 - 2 tbsp boiling water
 - 1 cup sugar
 - 120g salted butter

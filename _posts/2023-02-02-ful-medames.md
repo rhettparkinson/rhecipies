@@ -1,10 +1,11 @@
 ---
 layout: post
+title: Egyptian Fava Bean Mash With Toppings
 cuisine: middle-eastern
 tags: comforting
 preptime: 30 mins
 image: /assets/images/ful-medames-topped-with-chopped-parsely-tomatoes-radishes-sumac-olive-oil.webp
-excerpt: One of my favourite meals any time of day, ful is a blend of creamy mashed fava beans and tahini seasoned with aromatic spices, topped with fresh, bright ingredients.
+excerpt: Ful Medames is a blend of creamy mashed fava beans and tahini seasoned with aromatic spices, topped with fresh, bright ingredients.
 ---
 
 {% ingredient %}

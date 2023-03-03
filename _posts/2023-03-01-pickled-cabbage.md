@@ -1,6 +1,6 @@
 ---
 layout: post
-cuisine: rest-of-europe
+cuisine: rest-of-world
 tags: healthy
 preptime: 15 mins
 excerpt: Tangy and crunchy, it's awesome in sandwiches, tacos, salads, or as a side.

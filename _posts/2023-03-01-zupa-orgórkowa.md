@@ -1,9 +1,10 @@
 ---
 layout: post
-cuisine: rest-of-europe
+title: Polish Soup With Pickles & Sour Cream
+cuisine: rest-of-world
 tags: comforting
 preptime: 30 mins
-excerpt: A traditional Polish soup (zoo-pah oh-goor-koh-vah) made with sour pickles and vegetables.
+excerpt: Zupa Orgórkowa is a traditional Polish soup (zoo-pah oh-goor-koh-vah) made with sour cream, pickles and vegetables.
 ---
 
 {% ingredient %}

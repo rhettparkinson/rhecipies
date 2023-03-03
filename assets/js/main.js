@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // ----------------
 
   const themeSwitcher = document.querySelector(".switcher");
-
   let currentTheme = localStorage.getItem("theme");
 
   if (currentTheme === null) {
@@ -71,15 +70,13 @@ document.addEventListener("DOMContentLoaded", function () {
         currentTheme === "light" ? "dark" : "light"
       );
     });
-    setTimeout(() => {
-      themeSwitcher.blur();
-    }, 500);
+    themeSwitcher.classList.toggle("rotate");
   };
-
+  
   themeSwitcher.addEventListener("click", toggleTheme);
 
   document.querySelector("button").addEventListener(
-    "touchstart",
+    "touchend",
     function () {
       this.blur();
     },

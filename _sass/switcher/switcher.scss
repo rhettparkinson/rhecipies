@@ -50,20 +50,29 @@
 
   &:focus,
   &:hover {
-    max-width: 100%;
     transition: background-color var(--transition),
       border-color var(--transition), color var(--transition),
       box-shadow var(--transition);
-    box-shadow: var(--card-box-shadow), 0 0 0 0.2rem var(--secondary-focus);
   }
 
-  &:hover::after {
-    transform: rotate(180deg);
+  &.rotate {
+    &::after {
+      transform: rotate(180deg);
+    }
   }
 
   &:hover i {
-    max-width: 100%;
-    padding: 0 calc(var(--spacing) / 2) 0 calc(var(--spacing) / 4);
     transition: max-width var(--transition), padding var(--transition);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:focus,
+    &:hover {
+      max-width: 100%;
+    }
+    &:hover i {
+      max-width: 100%;
+      padding: 0 calc(var(--spacing) / 2) 0 calc(var(--spacing) / 4);
+    }
   }
 }

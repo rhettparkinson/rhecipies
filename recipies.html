@@ -19,12 +19,18 @@ title: Browse recipes
             />
           </div>
           {% endif %}
-          <div class="meta">
+          <div class="pills">
+            {% if cuisine.name %}
             <small>
               <span style="color: #{{ cuisine.color }}"
                 >{{ cuisine.name }}</span
               >
             </small>
+            {% endif %} {% if post.tags %} {% for tag in post.tags %}
+            <small>
+              <span>{{ tag | capitalize }}</span>
+            </small>
+            {% endfor %} {% endif %}
           </div>
           {% comment %}
           Prevent orphaned words in titles

@@ -15,7 +15,7 @@ https://jameshfisher.com/2019/05/05/how-can-i-add-tags-to-a-jekyll-blog/
       <div class="card">
         <a href="{{ post.url | relative_url }}">
           <article>
-            <div class="meta">
+            <div class="pills">
               {% assign cuisine = site.cuisines | where: 'short_name', post.cuisine
               | first %} {% if cuisine %}
               <small>

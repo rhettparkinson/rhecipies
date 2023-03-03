@@ -17,7 +17,7 @@ layout: default
           {% if page.tags %}
             {% for tag in page.tags %}
               <small>
-                <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">{{ tag }}</a>
+                <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">{{ tag | capitalize }}</a>
               </small>
             {% endfor %}
           {% endif %}

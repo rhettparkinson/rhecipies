@@ -1,4 +1,6 @@
 - name: Browse recipies
   link: /recipies.html
+- name: View tags
+  link: /tags.html
 - name: Submit a link
   link: /submit.html

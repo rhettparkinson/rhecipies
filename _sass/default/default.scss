@@ -7,6 +7,14 @@ body {
   overflow-x: hidden;
 }
 
+html[data-theme="dark"] body {
+  background-image: url(/assets/images/pattern-dark.svg);
+}
+
+body {  
+  background-image: url(/assets/images/pattern-light.svg);
+}
+
 ul {
   padding-inline-start: calc((var(--spacing)) * 1.33);
 }
@@ -64,12 +72,7 @@ main {
 
 /* content */
 
-html[data-theme="dark"] main {
-  background-image: url(/assets/images/pattern-dark.svg);
-}
-
 main {
-  background-image: url(/assets/images/pattern-light.svg);
   padding-top: calc(
     (var(--nav-element-spacing-vertical) * 2) + calc(var(--font-size) * 1.5)
   );

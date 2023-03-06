@@ -45,7 +45,7 @@ document.querySelector("button").addEventListener(
 // ---------------
 
 // Add 'current-page' class to the body element
-setTimeout(function () {
+function addCurrentPageClass() {
   document.body.classList.add("current-page");
   // Trigger card animations
   document.querySelectorAll(".card").forEach(function (card, index) {
@@ -53,7 +53,18 @@ setTimeout(function () {
       card.classList.add("animate");
     }, index * 100); // Stagger the animations by 100ms
   });
-}, 100);
+}
+
+if (
+  window.performance &&
+  window.performance.getEntriesByType("navigation")[0].type === "back_forward"
+) {
+  // Page was loaded from cache or using the back/forward button, so add the 'current-page' class immediately
+  addCurrentPageClass();
+} else {
+  // Page was loaded for the first time, so wait for the 'load' event
+  window.addEventListener("load", addCurrentPageClass);
+}
 
 // Add click event listener to all anchor elements
 document.querySelectorAll("a").forEach(function (anchor) {
@@ -78,6 +89,7 @@ document.querySelectorAll("a").forEach(function (anchor) {
     });
   }
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // ----------------

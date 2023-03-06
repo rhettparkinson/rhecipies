@@ -44,6 +44,10 @@ document.querySelector("button").addEventListener(
 // Page transition
 // ---------------
 
+// ---------------
+// Page transition
+// ---------------
+
 // Add 'current-page' class to the body element
 function addCurrentPageClass() {
   document.body.classList.add("current-page");
@@ -55,17 +59,6 @@ function addCurrentPageClass() {
   });
 }
 
-if (
-  window.performance &&
-  window.performance.getEntriesByType("navigation")[0].type === "back_forward"
-) {
-  // Page was loaded from cache or using the back/forward button, so add the 'current-page' class immediately
-  addCurrentPageClass();
-} else {
-  // Page was loaded for the first time, so wait for the 'load' event
-  window.addEventListener("load", addCurrentPageClass);
-}
-
 // Add click event listener to all anchor elements
 document.querySelectorAll("a").forEach(function (anchor) {
   // Check if the anchor link is an internal link
@@ -74,13 +67,9 @@ document.querySelectorAll("a").forEach(function (anchor) {
       // prevent default link behavior
       e.preventDefault();
       // Fade out current page
-      setTimeout(function () {
-        document.body.classList.add("fade-out");
-        // remove the current-page class from the current page
-        document
-          .querySelector(".current-page")
-          .classList.remove("current-page");
-      }, 200);
+      document.body.classList.add("fade-out");
+      // remove the current-page class from the current page
+      document.querySelector(".current-page").classList.remove("current-page");
       // Wait for the fade out animation to finish
       setTimeout(function () {
         // Navigate to new page
@@ -90,6 +79,25 @@ document.querySelectorAll("a").forEach(function (anchor) {
   }
 });
 
+// Add popstate event listener to detect history changes
+window.addEventListener("popstate", function (event) {
+  // Check if the current page is in the browser's history
+  var currentUrl = window.location.href;
+  var historyUrl = event.state ? event.state.url : null;
+  if (currentUrl === historyUrl) {
+    // Add 'current-page' class to the body element
+    addCurrentPageClass();
+  }
+});
+
+// Add 'current-page' class to the body element if the page was loaded from cache
+if (window.performance && window.performance.navigation.type === 2) {
+  addCurrentPageClass();
+}
+
+// -----------------------------
+// Wait until the DOM has loaded
+// -----------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
   // ----------------

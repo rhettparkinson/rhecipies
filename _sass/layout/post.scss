@@ -12,13 +12,13 @@
 }
 
 .recipe__header {
-  background-color: var(--muted-border-color);
+  background-color: var(--muted-background-color);
   grid-column-gap: 0;
   padding: 0;
 }
 
 .recipe__description {
-  border-right: solid 2px var(--muted-border-color);
+  border-right: solid 2px var(--muted-background-color);
   display: grid;
   place-content: center;
   padding: 2rem;
@@ -155,7 +155,7 @@
       content: "Step " counter(step) ".";
       display: block;
       color: var(--h4-color);
-      margin-bottom: calc(var(--typography-spacing-vertical) * 0.5);
+      margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
     }
   }
 }

@@ -2,6 +2,7 @@
 layout: post
 title: Vegetable Ramen Stock With Kombu
 cuisine: asian
+tags: condiments
 preptime: 120 mins
 excerpt: It's called a 'ramen' stock, but this is just a tasty broth that can be used in anything.
 ---

@@ -51,16 +51,24 @@ layout: default
     </div>
   </header>
 
+  <article class="grid recipe__instructions recipe__instructions--desktop">    
+    <div class="recipe__ingredients">
+      <div class="container">
+        <h2>Ingredients</h2>
+        {{ site.data.ingredient }}
+      </div>
+    </div>
+    <div class="recipe__method">
+      <div class="container">
+        <h2>Method</h2>
+        {{ site.data.method }}
+      </div>
+    </div>
+  </article>
+
   <article
-    class="grid recipe__instructions"
+    class="recipe__instructions recipe__instructions--mobile"
     x-data="{ showIngredients: true, showMethod: false, windowWidth: window.innerWidth }"
-    x-init="
-    window.addEventListener('resize', () => {
-      windowWidth = window.innerWidth;
-      showIngredients = windowWidth > 992 ? true : showIngredients;
-      showMethod = windowWidth > 992 ? true : false;
-    })
-  "
   >
     <div class="recipe__toggle">
       <button
@@ -78,16 +86,18 @@ layout: default
     </div>
     <div
       class="recipe__ingredients"
+      :class="{ 'active': showIngredients || (windowWidth > 992 && !showMethod) }"
       x-show="showIngredients || windowWidth > 992"
-      x-swipe:right.threshold.100px="
-        showMethod = true;
-        showIngredients = false;
-        $dispatch('swiped-right');
-      "
-      x-on:swiped-right.window="
-        showMethod = true;
-        showIngredients = false;
-      "
+      x-transition:enter.opacity.duration.600ms
+      x-swipe:left.threshold.100px="
+      showMethod = true;
+      showIngredients = false;
+      $dispatch('swiped-left');
+    "
+      x-on:swiped-left.window="
+      showMethod = true;
+      showIngredients = false;
+    "
     >
       <div class="container">
         <h2>Ingredients</h2>
@@ -96,16 +106,18 @@ layout: default
     </div>
     <div
       class="recipe__method"
+      :class="{ 'active': showMethod || (windowWidth > 992 && !showIngredients) }"
       x-show="showMethod || windowWidth > 992"
-      x-swipe:left.threshold.100px="
-        showIngredients = true;
-        showMethod = false;
-        $dispatch('swiped-left');
-      "
-      x-on:swiped-left.window="
-        showIngredients = true;
-        showMethod = false;
-      "
+      x-transition:enter.opacity.duration.1000ms
+      x-swipe:right.threshold.100px="
+      showIngredients = true;
+      showMethod = false;
+      $dispatch('swiped-right');
+    "
+      x-on:swiped-right.window="
+      showIngredients = true;
+      showMethod = false;
+    "
     >
       <div class="container">
         <h2>Method</h2>

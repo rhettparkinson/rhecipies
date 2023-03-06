@@ -81,7 +81,7 @@ layout: default
     <div
       class="recipe__ingredients"
       x-show="showIngredients || window.innerWidth > 992"
-      x-swipe.right="showMethod = true; showIngredients = false;"
+      x-swipe:right.threshold.100px="showMethod = true; showIngredients = false;"
     >
       <div class="container">
         <h2>Ingredients</h2>
@@ -91,7 +91,7 @@ layout: default
     <div
       class="recipe__method"
       x-show="showMethod || window.innerWidth > 992"
-      x-swipe.left="showIngredients = true; showMethod = false;"
+      x-swipe:left.threshold.100px="showIngredients = true; showMethod = false;"
     >
       <div class="container">
         <h2>Method</h2>

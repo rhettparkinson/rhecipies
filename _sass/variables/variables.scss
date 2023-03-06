@@ -46,6 +46,7 @@
   --h5-color: var(--secondary-color);
   --h6-color: var(--secondary-color);
   --muted-color: #aaa;
+  --muted-background-color: #f5f5f5;
   --muted-border-color: #ddd;
   --primary: var(--primary-color);
   --primary-hover: var(--primary-color);
@@ -152,6 +153,7 @@
     --h5-color: var(--secondary-color);
     --h6-color: var(--secondary-color);
     --muted-color: #666;
+    --muted-background-color: #333;
     --muted-border-color: #555;
     --primary: var(--primary-color-lighter);
     --primary-hover: var(--primary-color-lighter);
@@ -258,7 +260,8 @@
   --h4-color: var(--secondary-color);
   --h5-color: var(--secondary-color);
   --h6-color: var(--secondary-color);
-  --muted-color: #222;
+  --muted-color: #666;
+  --muted-background-color: #333;
   --muted-border-color: var(--black-focus);
   --primary: var(--primary-color-lighter);
   --primary-hover: var(--primary-color-lighter);
@@ -479,7 +482,8 @@ h6 {
 
 h1 {
   font-family: "Epilogue", sans-serif;
-  --font-size: clamp(1.75rem, 1.1rem + 3.25vw, 5rem);
+  line-height: 1.25em;
+  --font-size: clamp(1.75rem, 1.3rem + 2.25vw, 4rem);
   --typography-spacing-vertical: 3rem;
 }
 

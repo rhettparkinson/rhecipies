@@ -1,55 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // ----------------
-  // Dark-mode toggle
-  // ----------------
+// ---------------
+// Page transition
+// ---------------
 
-  const themeSwitcher = document.querySelector(".switcher");
-  let currentTheme = localStorage.getItem("theme");
-
-  if (currentTheme === null) {
-    localStorage.setItem("theme", "light");
-  }
-
-  if (currentTheme === "dark") {
-    document.body.querySelectorAll("[data-theme]").forEach((el) => {
-      el.setAttribute("data-theme", "light");
-    });
-    themeSwitcher.firstChild.textContent = "Turn off dark-mode";
-  }
-
-  document.documentElement.setAttribute("data-theme", currentTheme);
-
-  const toggleTheme = () => {
-    currentTheme = currentTheme === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", currentTheme);
-    themeSwitcher.firstChild.textContent =
-      currentTheme === "light" ? "Turn on dark-mode" : "Turn off dark-mode";
-    localStorage.setItem("theme", currentTheme);
-    document.body.querySelectorAll("[data-theme]").forEach((el) => {
-      el.setAttribute(
-        "data-theme",
-        currentTheme === "light" ? "dark" : "light"
-      );
-    });
-    themeSwitcher.classList.toggle("rotate");
-  };
-
-  themeSwitcher.addEventListener("click", toggleTheme);
-
-  document.querySelector("button").addEventListener(
-    "touchend",
-    function () {
-      this.blur();
-    },
-    { passive: true }
-  );
-
-  // ---------------
-  // Page transition
-  // ---------------
+(function() {
 
   // Add 'current-page' class to the body element
-  function addCurrentPageClass() {
+  setTimeout(function () {
     document.body.classList.add("current-page");
     // Trigger card animations
     document.querySelectorAll(".card").forEach(function (card, index) {
@@ -57,15 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.classList.add("animate");
       }, index * 100); // Stagger the animations by 100ms
     });
-  }
-
-  if (performance.navigation.type === 2) {
-    // Page was loaded from cache, so add the 'current-page' class immediately
-    addCurrentPageClass();
-  } else {
-    // Page was loaded for the first time, so wait for the 'load' event
-    window.addEventListener("load", addCurrentPageClass);
-  }
+  }, 100);
 
   // Add click event listener to all anchor elements
   document.querySelectorAll("a").forEach(function (anchor) {
@@ -91,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+})();
+
+document.addEventListener("DOMContentLoaded", function () {
   // ----------------
   // Hide/show navbar
   // ----------------

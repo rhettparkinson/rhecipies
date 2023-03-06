@@ -5,23 +5,20 @@
     grid-column-gap: 0;
     border-radius: 0;
     box-shadow: none;
-    background-color: transparent;
     margin: 0;
     padding: 0;
   }
 }
 
 .recipe__header {
-  background-color: var(--muted-background-color);
   grid-column-gap: 0;
   padding: 0;
 }
 
 .recipe__description {
-  border-right: solid 2px var(--muted-background-color);
   display: grid;
   place-content: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
 
   @media screen and (min-width: 992px) {
     padding: 4vw;
@@ -94,6 +91,7 @@
 }
 
 .recipe__instructions {
+  background-color: var(--background-color);
 
   &.recipe__instructions--desktop {
     display: none;
@@ -136,6 +134,20 @@
 }
 
 .recipe__ingredients {
+  position: relative;
+
+  &::after {
+    @media screen and (min-width: 992px) {
+      content: '';
+      height: 100%;
+      width: 2px;
+      background-color: var(--muted-border-color);
+      position: absolute;
+      right: -1px;
+      top: 4vw;
+      height: calc(100% - 8vw);
+    }
+  }
   
   li {
     margin-bottom: 0;
@@ -153,10 +165,6 @@
 
 .recipe__method {
   counter-reset: step;
-
-  @media screen and (min-width: 992px) {
-    border-left: solid 2px var(--muted-border-color);
-  }
 
   li {
     counter-increment: step;

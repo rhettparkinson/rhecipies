@@ -53,16 +53,14 @@ layout: default
 
   <article
     class="grid recipe__instructions"
-    x-data="{ showIngredients: window.innerWidth <= 992, showMethod: false }"
-    @resize.window="
-        if (window.innerWidth > 992) {
-            showIngredients = true;
-            showMethod = true;
-        } else {
-            showIngredients = true;
-            showMethod = false;
-        }
-    "
+    x-data="{ showIngredients: true, showMethod: false, windowWidth: window.innerWidth }"
+    x-init="
+    window.addEventListener('resize', () => {
+      windowWidth = window.innerWidth;
+      showIngredients = windowWidth > 992 ? true : showIngredients;
+      showMethod = windowWidth > 992 ? true : false;
+    })
+  "
   >
     <div class="recipe__toggle">
       <button
@@ -73,15 +71,23 @@ layout: default
       </button>
       <button
         :class="{ 'active': showMethod }"
-        @click="showMethod = true; showIngredients = false;"
+        @click="showIngredients = false; showMethod = true;"
       >
         Method
       </button>
     </div>
     <div
       class="recipe__ingredients"
-      x-show="showIngredients || window.innerWidth > 992"
-      x-swipe:right.threshold.100px="showMethod = true; showIngredients = false;"
+      x-show="showIngredients || windowWidth > 992"
+      x-swipe:right.threshold.100px="
+        showMethod = true;
+        showIngredients = false;
+        $dispatch('swiped-right');
+      "
+      x-on:swiped-right.window="
+        showMethod = true;
+        showIngredients = false;
+      "
     >
       <div class="container">
         <h2>Ingredients</h2>
@@ -90,8 +96,16 @@ layout: default
     </div>
     <div
       class="recipe__method"
-      x-show="showMethod || window.innerWidth > 992"
-      x-swipe:left.threshold.100px="showIngredients = true; showMethod = false;"
+      x-show="showMethod || windowWidth > 992"
+      x-swipe:left.threshold.100px="
+        showIngredients = true;
+        showMethod = false;
+        $dispatch('swiped-left');
+      "
+      x-on:swiped-left.window="
+        showIngredients = true;
+        showMethod = false;
+      "
     >
       <div class="container">
         <h2>Method</h2>

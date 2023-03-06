@@ -45,7 +45,7 @@
   .imageWrapper {
     aspect-ratio: 1 / 1;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1500px) {
       aspect-ratio: 4 / 3;
     }
 
@@ -89,6 +89,25 @@
     &:hover,
     &:focus {
       color: var(--primary);
+    }
+  }
+}
+
+.recipe__instructions {
+
+  &.recipe__instructions--desktop {
+    display: none;
+
+    @media (min-width: 992px) {
+      display: grid;
+    }
+  }
+
+  &.recipe__instructions--mobile {
+    display: block;
+
+    @media (min-width: 992px) {
+      display: none;
     }
   }
 }

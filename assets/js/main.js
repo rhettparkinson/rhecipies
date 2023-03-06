@@ -1,43 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // ---------------
-  // Page transition
-  // ---------------
-
-  // Add 'current-page' class to the body element
-  setTimeout(function () {
-    document.body.classList.add("current-page");
-    // Trigger card animations
-    document.querySelectorAll(".card").forEach(function (card, index) {
-      setTimeout(function () {
-        card.classList.add("animate");
-      }, index * 100); // Stagger the animations by 100ms
-    });
-  }, 100);
-
-  // Add click event listener to all anchor elements
-  document.querySelectorAll("a").forEach(function (anchor) {
-    // Check if the anchor link is an internal link
-    if (anchor.href.startsWith(location.origin)) {
-      anchor.addEventListener("click", function (e) {
-        // prevent default link behavior
-        e.preventDefault();
-        // Fade out current page
-        setTimeout(function () {
-          document.body.classList.add("fade-out");
-          // remove the current-page class from the current page
-          document
-            .querySelector(".current-page")
-            .classList.remove("current-page");
-        }, 200);
-        // Wait for the fade out animation to finish
-        setTimeout(function () {
-          // Navigate to new page
-          window.location.href = anchor.href;
-        }, 700);
-      });
-    }
-  });
-
   // ----------------
   // Dark-mode toggle
   // ----------------
@@ -72,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     themeSwitcher.classList.toggle("rotate");
   };
-  
+
   themeSwitcher.addEventListener("click", toggleTheme);
 
   document.querySelector("button").addEventListener(
@@ -82,6 +43,53 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     { passive: true }
   );
+
+  // ---------------
+  // Page transition
+  // ---------------
+
+  // Add 'current-page' class to the body element
+  function addCurrentPageClass() {
+    document.body.classList.add("current-page");
+    // Trigger card animations
+    document.querySelectorAll(".card").forEach(function (card, index) {
+      setTimeout(function () {
+        card.classList.add("animate");
+      }, index * 100); // Stagger the animations by 100ms
+    });
+  }
+
+  if (performance.navigation.type === 2) {
+    // Page was loaded from cache, so add the 'current-page' class immediately
+    addCurrentPageClass();
+  } else {
+    // Page was loaded for the first time, so wait for the 'load' event
+    window.addEventListener("load", addCurrentPageClass);
+  }
+
+  // Add click event listener to all anchor elements
+  document.querySelectorAll("a").forEach(function (anchor) {
+    // Check if the anchor link is an internal link
+    if (anchor.href.startsWith(location.origin)) {
+      anchor.addEventListener("click", function (e) {
+        // prevent default link behavior
+        e.preventDefault();
+        // Fade out current page
+        setTimeout(function () {
+          document.body.classList.add("fade-out");
+          // remove the current-page class from the current page
+          document
+            .querySelector(".current-page")
+            .classList.remove("current-page");
+        }, 200);
+        // Wait for the fade out animation to finish
+        setTimeout(function () {
+          // Navigate to new page
+          window.location.href = anchor.href;
+        }, 700);
+      });
+    }
+  });
 
   // ----------------
   // Hide/show navbar

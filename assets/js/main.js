@@ -55,8 +55,11 @@ function addCurrentPageClass() {
   });
 }
 
-if (performance.navigation.type === 2) {
-  // Page was loaded from cache, so add the 'current-page' class immediately
+if (
+  window.performance &&
+  window.performance.getEntriesByType("navigation")[0].type === "back_forward"
+) {
+  // Page was loaded from cache or using the back/forward button, so add the 'current-page' class immediately
   addCurrentPageClass();
 } else {
   // Page was loaded for the first time, so wait for the 'load' event

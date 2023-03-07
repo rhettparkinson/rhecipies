@@ -7,25 +7,20 @@ layout: default
     <div class="recipe__description">
       <div class="container">
         <div class="pills">
-          {% assign cuisine = site.cuisines | where: 'short_name', page.cuisine
-          | first %} {% if cuisine %}
-          <small>
+            {% assign cuisine = site.cuisines | where: 'short_name', page.cuisine | first %} {% if cuisine %}
             <a
               style="background-color: #{{ cuisine.color }}; border-color:  #{{ cuisine.color }};"
               href="{{ cuisine.url | relative_url }}"
               >{{ cuisine.name }}</a
             >
-          </small>
-          {% endif %} {% if page.tags %} {% for tag in page.tags %}
-          <small>
+            {% endif %} {% if page.tags %} {% for tag in page.tags %}
             <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}"
               >{{ tag | capitalize }}</a
             >
-          </small>
-          {% endfor %} {% endif %}
+            {% endfor %} {% endif %}          
         </div>
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.excerpt }}</p>
+        <h1 class="recipe__title">{{ page.title }}</h1>
+        <p class="recipe__excerpt">{{ page.excerpt }}</p>
       </div>
     </div>
     <div class="recipe__image">

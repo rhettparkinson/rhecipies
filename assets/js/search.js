@@ -27,3 +27,13 @@ function animateSearchResults() {
 document
   .getElementById("search-results")
   .addEventListener("DOMNodeInserted", animateSearchResults);
+
+// Prevent form submission with the enter key
+// https://github.com/christian-fei/Simple-Jekyll-Search/issues/21
+document
+  .getElementById("search-input")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+    }
+  });

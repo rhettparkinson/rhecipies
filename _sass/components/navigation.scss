@@ -36,11 +36,6 @@
   }
 }
 
-body.fade-out #nav.hidden {
-  transform: translateY(0);
-  transition: transform 0.1s cubic-bezier(1, 0.01, 0.21, 0.99);
-}
-
 #nav {
   position: fixed;
   top: 0;

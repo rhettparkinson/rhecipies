@@ -1,11 +1,10 @@
 @import "picocss/pico/scss/pico.scss";
 @import "variables/variables.scss";
-@import "default/default.scss";
-@import "images/images.scss";
-@import "cards/cards.scss";
-@import "pills/pills.scss";
-@import "switcher/switcher.scss";
-@import "navigation/navigation.scss";
-@import "layout/cuisines.scss";
+@import "components/cards.scss";
+@import "components/images.scss";
+@import "components/navigation.scss";
+@import "components/pills.scss";
+@import "components/switcher.scss";
+@import "layout/default.scss";
 @import "layout/post.scss";
 @import "pages/search.scss";

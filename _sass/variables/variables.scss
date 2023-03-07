@@ -29,9 +29,9 @@
   --primary-color-lighter: #0a0; /* Bright Green */
   --secondary-color: #808782; /* Battleship Grey */
   --black: #121212; /* Eerie Black */
-  --black-focus: #444444;
+  --black-focus: #222;
   --white: #ffffff; /* White */
-  --white-focus: #eee;
+  --white-focus: #f5f5f5;
 }
 
 [data-theme="light"],
@@ -68,6 +68,8 @@
   --blockquote-footer-color: var(--muted-color);
   --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pill-background-color: #f5f5f5;
+  --pill-border--color: var(--muted-border-color);
   --form-element-background-color: #eee;
   --form-element-border-color: #ddd;
   --form-element-color: var(--color);
@@ -175,6 +177,8 @@
     --blockquote-footer-color: var(--muted-color);
     --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    --pill-background-color: #444;
+    --pill-border--color: var(--muted-border-color);
     --form-element-background-color: #2f2f2f;
     --form-element-border-color: #555555;
     --form-element-color: var(--color);
@@ -283,7 +287,7 @@
   --blockquote-footer-color: var(--muted-color);
   --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  --pill-background-color: #333;
+  --pill-background-color: #444;
   --pill-border--color: var(--muted-border-color);
   --form-element-background-color: #2f2f2f;
   --form-element-border-color: #555555;

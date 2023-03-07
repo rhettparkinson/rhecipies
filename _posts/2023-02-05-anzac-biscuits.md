@@ -1,7 +1,7 @@
 ---
 layout: post
 cuisine: rest-of-world
-tags: desserts
+tags: sweet
 preptime: 30 mins
 image: /assets/images/anzac-biscuits.webp
 excerpt: ANZAC biscuits are a traditional Australian and New Zealand sweet biscuit made with rolled oats, flour, coconut, sugar, butter, and golden syrup.

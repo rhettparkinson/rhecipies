@@ -2,7 +2,7 @@
 layout: post
 title: Summer Pasta With Cherry Tomatoes & Black Olives
 cuisine: italian
-tags: healthy
+tags: [healthy, comforting]
 preptime: 30 mins
 excerpt: This healthy pasta dish contains curly pasta tossed with mixed cherry tomatoes, black olives, garlic, fresh basil and marjoram, seasoned with red wine vinegar and extra virgin olive oil.
 ---

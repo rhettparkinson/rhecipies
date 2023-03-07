@@ -1,0 +1,27 @@
+---
+layout: default
+title: Tags
+---
+
+<section class="container">
+  
+  <header>
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  {% for tag in site.tags %}
+  <div class="card">
+    <a href="/tag/{{ tag | first | slugify }}">
+      <article>
+        <header class="card__header">
+          <div class="card__title">
+            <h2>{{ tag | first | capitalize }}</h2>
+            <span class="card__count">{{- tag | last | size -}}</span>
+          </div>
+        </header>        
+      </article>
+    </a>
+  </div>
+  {% endfor %}
+
+</div>

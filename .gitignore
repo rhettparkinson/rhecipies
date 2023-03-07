@@ -6,3 +6,5 @@ _site/
 .bundle/
 vendor/
 node_modules/
+# Ignore specific files
+*.code-workspace

@@ -14,27 +14,22 @@
      {% else %}
       {% assign base_url = "" %}
     {% endif %}
-    <!-- <link rel="preload" href="{{ site.baseurl }}/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
-    </noscript> -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
     {% seo %}
   </head>
-  <body class="{{ page.title | downcase | replace: ' ', '-' }}" data-page-layout="{{ page.layout }}">
+  <body class="{{ page.title | downcase | replace: ' ', '-' }}" data-page-layout="{{ page.layout }}" data-barba="wrapper">
     {% include navigation.html %}
-
-    <div id="transition-wrapper">
-      <main>        
-          {{ content }}
-      </main>
-    </div>
+    <main data-barba="container" data-barba-namespace="{{ page.title | downcase | replace: ' ', '-' }}">
+        {{ content }}
+    </main>
 
     <button class="contrast switcher" aria-label="Turn on dark mode"><i>Turn on dark mode</i></button>
 
-    <script src="https://unpkg.com/alpinejs-swipe"></script>
-    <script src="https://unpkg.com/alpinejs@3.11.1/dist/cdn.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script defer src="https://unpkg.com/alpinejs-swipe"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.11.1/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+    <script defer src="{{ site.baseurl }}/assets/js/main.js"></script>
     {% if jekyll.environment == "production" %}
     <!-- <script src="my-analytics-script.js"></script> -->
     {% endif %}

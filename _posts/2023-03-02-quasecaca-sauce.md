@@ -2,7 +2,7 @@
 layout: post
 title: Quasecaca Sauce With Avocado
 cuisine: latin-american
-tags: condiments
+tags: condiment
 preptime: 5 mins
 excerpt: A creamy sauce that can be used as a vegan substitute for queso dip or as a topping for tacos and other Mexican dishes.
 ---

@@ -12,20 +12,23 @@ layout: default
   <div class="card">
     <a href="{{ post.url | relative_url }}">
       <article>
-        <div class="pills">
-          {% assign cuisine = site.cuisines | where: 'short_name', post.cuisine
-          | first %} {% if cuisine %}
-          <small>
-            <span style="color: #{{ cuisine.color }}">{{ cuisine.name }}</span>
-          </small>
-          {% endif %} {% if post.tags %} {% for tag in post.tags %}
-          <small>
-            <span>{{ tag | capitalize }}</span>
-          </small>
-          {% endfor %} {% endif %}
+        <header class="card__header">
+          <div class="card__meta">
+            <div class="pills">
+              {% assign cuisine = site.cuisines | where: 'short_name', post.cuisine
+              | first %} {% if cuisine %}
+                <span style="color: #{{ cuisine.color }}">{{ cuisine.name }}</span>
+                {% endif %} {% if post.tags %} {% for tag in post.tags %}
+                <span>{{ tag | capitalize }}</span>
+                {% endfor %} {% endif %}
+            </div>
+          </div>
+          <div class="card__title">
+            <h2>{{- post.title -}}</h2>
+        </header>
+        <div class="card__content">
+          <p>{{ post.excerpt }}</p>
         </div>
-        <h2>{{- post.title -}}</h2>
-        <p>{{ post.excerpt }}</p>
       </article>
     </a>
   </div>

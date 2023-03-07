@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Adobo <br>All-Purpose Seasoning
+title: Adobo All-Purpose Seasoning
 cuisine: latin-american
-tags: condiments
+tags: condiment
 preptime: 5 mins
 excerpt: An all-purpose seasoning typically including garlic, oregano, black pepper, herbs, and spices.
 ---

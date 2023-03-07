@@ -1,44 +1,48 @@
-document.body.classList.add("current-page");
+// --------
+// Babra.js
+// --------
+
+const defaultTransition = {
+  name: "default-transition",
+  leave(data) {
+    // Define your leave animation here
+    return data.current.container.animate([{ opacity: 1 }, { opacity: 0 }], {
+      duration: 500,
+      easing: "ease-in-out",
+    }).finished;
+  },
+  enter(data) {
+    // Define your enter animation here
+    const container = data.next.container;
+    container.style.opacity = 0;
+    container
+      .animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 500,
+        easing: "ease-in-out",
+      })
+      .finished.then(() => {
+        container.style.opacity = 1;
+      });
+  },
+};
+
+barba.init({
+  transitions: [defaultTransition],
+  views: [{
+    namespace: 'search',
+    beforeEnter({ next }) {
+        let script = document.createElement('script');
+        script.src = '/assets/js/search.js';
+        next.container.appendChild(script);
+    }
+  }]
+});
+
+// -------------
+// On DOM loaded
+// -------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  
-  // ---------------
-  // Page transition
-  // ---------------
-
-  // Add 'current-page' class to the body element
-  setTimeout(function () {
-    // Trigger card animations
-    document.querySelectorAll(".card").forEach(function (card, index) {
-      setTimeout(function () {
-        card.classList.add("animate");
-      }, index * 100); // Stagger the animations by 100ms
-    });
-  }, 100);
-
-  // Add click event listener to all anchor elements
-  document.querySelectorAll("a").forEach(function (anchor) {
-    // Check if the anchor link is an internal link
-    if (anchor.href.startsWith(location.origin)) {
-      anchor.addEventListener("click", function (e) {
-        // prevent default link behavior
-        e.preventDefault();
-        // Fade out current page
-        setTimeout(function () {
-          document.body.classList.add("fade-out");
-          // remove the current-page class from the current page
-          document
-            .querySelector(".current-page")
-            .classList.remove("current-page");
-        }, 200);
-        // Wait for the fade out animation to finish
-        setTimeout(function () {
-          // Navigate to new page
-          window.location.href = anchor.href;
-        }, 700);
-      });
-    }
-  });
 
   // ----------------
   // Dark-mode toggle
@@ -74,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     themeSwitcher.classList.toggle("rotate");
   };
-  
+
   themeSwitcher.addEventListener("click", toggleTheme);
 
   document.querySelector("button").addEventListener(
@@ -110,12 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-/*
- * Modal
- *
- * Pico.css - https://picocss.com
- * Copyright 2019-2023 - Licensed under MIT
- */
+// ----------------------------------------
+// Modal
+// Pico.css - https://picocss.com
+// Copyright 2019-2023 - Licensed under MIT
+// ----------------------------------------
 
 // Config
 const isOpenClass = "modal-is-open";

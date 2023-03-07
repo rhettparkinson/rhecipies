@@ -4,7 +4,6 @@ title: Cuisines
 ---
 
 <section class="container">
-
   <header>
     <h1>{{ page.title }}</h1>
     <p>Browse recipies based on loosely defined geographic regions.</p>
@@ -14,13 +13,25 @@ title: Cuisines
   <div class="card">
     <a href="{{ cuisine.url | relative_url }}">
       <article style="background-color: #{{ cuisine.color }}">
-        <h2>
-          {{ cuisine.name }}
-        </h2>
-        <!-- <p>{{ cuisine.content | markdownify | strip_html | strip_newlines | escape_once }}</p> -->
+        <header class="card__header contrast">
+          <div class="card__title">
+            <h2>{{ cuisine.name }}</h2>
+            <span class="card__count"
+              >{{ site.posts | where: "cuisine", cuisine.slug | size }}</span
+            >
+          </div>
+        </header>
+        {% assign content = cuisine.content | strip_newlines %}
+        {% if content != "" %}
+        <div class="card__content contrast">
+          <p>
+            {{ content | markdownify | strip_html | strip_newlines |
+            escape_once }}
+          </p>
+        </div>
+        {% endif %}
       </article>
     </a>
   </div>
   {% endfor %}
-
 </section>

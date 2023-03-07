@@ -32,7 +32,7 @@
 }
 
 .recipe__title {
-  padding-bottom: calc(var(--typography-spacing-vertical) * 0.25);
+  padding-bottom: var(--typography-spacing-vertical);
 }
 
 .recipe__image {
@@ -116,13 +116,13 @@
   }
 
   h2 {
-    margin-bottom: calc(var(--typography-spacing-vertical) * 0.5);
+    
   }
 }
 
 .recipe__ingredients,
 .recipe__method {
-  padding: 2rem 2rem 10rem 2rem;
+  padding: 4rem 2rem 10rem 2rem;
 
   @media screen and (min-width: 992px) {
     padding: 6vw 3vw;
@@ -161,10 +161,10 @@
   
   li {
     margin-bottom: 0;
-    padding: 0 0 calc(var(--typography-spacing-vertical) * 0.5) 0;
+    padding: 0 0 calc(var(--typography-spacing-vertical) * 1.5) 0;
 
     &:not(:first-of-type) {
-      margin-top: calc(var(--typography-spacing-vertical) * 0.5);
+      margin-top: calc(var(--typography-spacing-vertical) * 1.5);
     }
 
     &:not(:last-of-type) {
@@ -178,10 +178,10 @@
 
   li {
     counter-increment: step;
-    padding-bottom: calc(var(--typography-spacing-vertical) * 0.5);
+    padding-bottom: calc(var(--typography-spacing-vertical) * 1.5);
 
     &:not(:first-of-type) {
-      margin-top: calc(var(--typography-spacing-vertical) * 0.5);
+      margin-top: calc(var(--typography-spacing-vertical) * 1.5);
     }
     
     &:not(:last-of-type) {

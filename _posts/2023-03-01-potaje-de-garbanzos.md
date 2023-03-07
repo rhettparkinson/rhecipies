@@ -3,7 +3,7 @@ layout: post
 cuisine: spanish
 tags: comforting
 preptime: 45 mins
-excerpt: Originating in the southern Spanish province of Granada, this chickpea stew is distinct from others due to its unique thickener of egg and croutons.
+excerpt: From the southern Spanish province of Granada, this stew of chickpeas is distinct from others due to its unique thickener of egg and croutons.
 ---
 
 {% ingredient %}

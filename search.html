@@ -13,34 +13,5 @@ title: Search
       <input type="text" id="search-input" placeholder="Type something in..." />
       <div id="search-results"></div>
     </div>
-    <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Initialize the search plugin
-        var sjs = SimpleJekyllSearch({
-          searchInput: document.getElementById("search-input"),
-          resultsContainer: document.getElementById("search-results"),
-          json: "/search.json",
-          searchResultTemplate:
-            '<div class="card"><a href="{{site.baseurl}}{url}"><article><div class="meta"><span>{cuisine}</span></div><h2>{title}</h2><p>{desc}</p></article></a></div>',
-        });
-
-        document.getElementById("search-input").focus();
-
-        function animateSearchResults() {
-          var cards = document.querySelectorAll(".card");
-          var delay = 0;
-          cards.forEach(function (card, index) {
-            setTimeout(function () {
-              card.classList.add("animate");
-            }, index * 100); // Stagger the animations by 100ms
-          });
-        }
-        
-        document
-          .getElementById("search-results")
-          .addEventListener("DOMNodeInserted", animateSearchResults);
-      });
-    </script>
   </form>
 </section>

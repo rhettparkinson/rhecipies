@@ -5,14 +5,12 @@
 const defaultTransition = {
   name: "default-transition",
   leave(data) {
-    // Define your leave animation here
     return data.current.container.animate([{ opacity: 1 }, { opacity: 0 }], {
       duration: 500,
       easing: "ease-in-out",
     }).finished;
   },
   enter(data) {
-    // Define your enter animation here
     const container = data.next.container;
     container.style.opacity = 0;
     container

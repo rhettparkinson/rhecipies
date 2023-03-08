@@ -4,6 +4,7 @@ title: Dal Makhani With Brown Lentils & Kidney Beans
 cuisine: indian
 tags: [comforting, vegan]
 preptime: 45 mins
+image: /assets/images/dal-makhani.webp
 excerpt: A creamy Indian curry made with brown lentils cooked in a rich tomato and coconut milk gravy. If you omit the butter it's vegan too.
 ---
 

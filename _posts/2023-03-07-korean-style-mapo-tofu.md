@@ -2,7 +2,7 @@
 layout: post
 title: Korean-Style Mapo Tofu With Shiitake
 cuisine: asian
-tags: [spicy, healthy]
+tags: [spicy, healthy, vegan]
 preptime: 30 mins
 excerpt: A delicious fusion dish that combines the spicy and savory flavors of traditional Chinese mapo tofu with Korean gochujang and gochugaru. Adapted from an original recipe by maangchi.com
 ---

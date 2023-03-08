@@ -30,7 +30,7 @@ excerpt: A creamy Indian curry made with brown lentils cooked in a rich tomato a
 
 {% method %}
 
-- Add the lentils to heavy pot along with the stock and the bay leaf. Put the lid on cook on medium-high until mushy, around 15 minutes.
+- Add the lentils to a heavy pot along with the stock and the bay leaf. Put the lid on cook on medium-high until mushy, around 15 minutes.
 - Meanwhile, using a mortar and pestle, add the chopped garlic and ginger with half a teaspoon of salt and pound into a smooth paste.
 - Once the lentils are cooked, add the paste, tomato puree, spices, sugar, and most of the chopped coriander reserving just a little for garnish later. If you are using butter add that too.
 - Reduce heat and simmer for 10 minutes. Add some more water if needed.

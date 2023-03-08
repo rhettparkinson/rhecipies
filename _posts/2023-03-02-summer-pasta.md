@@ -2,7 +2,7 @@
 layout: post
 title: Summer Pasta With Cherry Tomatoes & Black Olives
 cuisine: italian
-tags: healthy
+tags: [healthy, vegan]
 preptime: 30 mins
 excerpt: This healthy pasta dish is seasoned with red wine vinegar and olive oil, tossed with mixed cherry tomatoes, black olives and a herb-infused dressing.
 ---

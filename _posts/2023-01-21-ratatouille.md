@@ -2,7 +2,7 @@
 layout: post
 title: Ratatoullie With Eggplant, Zucchini & Capsicum
 cuisine: french
-tags: [healthy, baked, sides]
+tags: [healthy, baked, vegan]
 preptime: 45 mins
 excerpt: This healthy dish is a great way to use up a variety of summer vegetables.
 ---

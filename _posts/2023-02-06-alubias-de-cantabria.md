@@ -2,7 +2,7 @@
 layout: post
 title: Cantabrian-style Bean Stew
 cuisine: spanish
-tags: [healthy, comforting]
+tags: [healthy, comforting, vegan]
 preptime: 30 mins
 excerpt: Originating from the north of Spain, this rustic stew is seasoned with paprika and cumin.
 ---

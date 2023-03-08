@@ -2,7 +2,7 @@
 layout: post
 title: Sweet Potato Mash With Lime Salsa
 cuisine: latin-american
-tags: [healthy, sides]
+tags: [healthy, sides, vegan]
 preptime: 45 mins
 excerpt: This Ottolenghi recipe is awesome with sausages, pan-fried tofu, or paneer steaks.
 ---

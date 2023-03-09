@@ -38,7 +38,6 @@ exclude:
   - assets/js/*
 
 include:
-  - assets/js/anijs-min.js
   - assets/js/bundle.js
   - assets/js/search.js
 

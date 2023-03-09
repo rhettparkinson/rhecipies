@@ -84,7 +84,7 @@ layout: default
       :class="{ 'active': showIngredients || (windowWidth > 992 && !showMethod) }"
       x-show="showIngredients || windowWidth > 992"
       x-transition:enter.opacity.duration.600ms
-      x-swipe:left.threshold.100px="
+      x-swipe:left.threshold.50px="
       showMethod = true;
       showIngredients = false;
       $dispatch('swiped-left');
@@ -104,7 +104,7 @@ layout: default
       :class="{ 'active': showMethod || (windowWidth > 992 && !showIngredients) }"
       x-show="showMethod || windowWidth > 992"
       x-transition:enter.opacity.duration.1000ms
-      x-swipe:right.threshold.100px="
+      x-swipe:right.threshold.50px="
       showIngredients = true;
       showMethod = false;
       $dispatch('swiped-right');

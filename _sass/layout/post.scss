@@ -32,6 +32,7 @@
 }
 
 .recipe__title {
+  margin-top: calc(var(--typography-spacing-vertical) * 0.25);
   padding-bottom: var(--typography-spacing-vertical);
 }
 
@@ -69,7 +70,7 @@
   justify-content: center;
   border-bottom: solid 2px var(--muted-border-color);
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     display: none;
   }
 
@@ -161,10 +162,10 @@
   
   li {
     margin-bottom: 0;
-    padding: 0 0 calc(var(--typography-spacing-vertical) * 1.5) 0;
+    padding: 0 0 calc(var(--typography-spacing-vertical) * 0.75) 0;
 
     &:not(:first-of-type) {
-      margin-top: calc(var(--typography-spacing-vertical) * 1.5);
+      margin-top: calc(var(--typography-spacing-vertical) * 0.75);
     }
 
     &:not(:last-of-type) {
@@ -177,6 +178,7 @@
   counter-reset: step;
 
   li {
+    color: var(--muted-color);
     counter-increment: step;
     padding-bottom: calc(var(--typography-spacing-vertical) * 1.5);
 
@@ -191,7 +193,7 @@
     &::before {
       content: "Step " counter(step) ".";
       display: block;
-      color: var(--h4-color);
+      color: var(--contrast);
       margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
     }
   }

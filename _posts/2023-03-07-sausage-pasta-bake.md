@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sausage & Pasta Bake With Breadcrumbs
+title: Sausage Pasta Bake With Breadcrumbs
 cuisine: italian
 tags: [baked, comforting]
 preptime: 45 mins

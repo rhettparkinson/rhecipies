@@ -1,13 +1,14 @@
 ---
 layout: default
 title: Submit a link
+permalink: /submit/
 ---
 
 <section class="container">
 
   <header>
     <h1>{{ page.title }}</h1>
-    <p>Found a great recipe online? Send me a link!</p>
+    <p>Found a great recipe online? Snapped an awesome pic of your food? Send me a link!</p>
   </header>
   
   <div class="card">
@@ -21,7 +22,7 @@ title: Submit a link
           <input type="text" name="name" id="name" placeholder="Anony Mouse">
         </label>
         <label for="recipeUrl">
-          Recipe URL
+          Link to something cool
           <input
             type="text"
             id="recipeUrl"
@@ -30,8 +31,8 @@ title: Submit a link
             required
           />
           <small
-            >Enter the full URL, ie.
-            https://nameofwebsite/an-awesome-recipe</small
+            >Enter the full URL, eg.
+            https://somewebsite.com/link</small
           >
         </label>
         <input type="hidden" name="_gotcha" style="display:none !important">

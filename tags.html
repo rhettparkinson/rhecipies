@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tags
+permalink: /tags/
 ---
 
 <section class="container">
@@ -11,14 +12,14 @@ title: Tags
 
   {% for tag in site.tags %}
   <div class="card">
-    <a href="/tag/{{ tag | first | slugify }}">
-      <article>
+    <a href="/tag/{{ tag | first | slugify }}" x-data="{ shown: false }" x-intersect.once="shown = true">
+      <article x-bind:style="{ visibility: shown ? 'visible' : 'hidden' }" x-bind:class="{ 'fadeInUp': shown }">
         <header class="card__header">
           <div class="card__title">
             <h2>{{ tag | first | capitalize }}</h2>
             <span class="card__count">{{- tag | last | size -}}</span>
           </div>
-        </header>        
+        </header>
       </article>
     </a>
   </div>

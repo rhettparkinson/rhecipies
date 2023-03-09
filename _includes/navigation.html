@@ -21,7 +21,7 @@
     </ul>    
     <ul class="nav__brand">
       <li>
-        <a href="{{ site.baseurl }}/">
+        <a href="{{ site.baseurl }}/posts/">
           <strong>Rhecipies</strong>
         </a>
       </li>
@@ -29,7 +29,11 @@
     <ul class="nav__items">
       {% for item in site.data.navigation %}
         <li>
-          <a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
+          {% if item.hash %}
+            <a href="{{ item.hash }}">{{ item.name }}</a>
+          {% else %}
+            <a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>

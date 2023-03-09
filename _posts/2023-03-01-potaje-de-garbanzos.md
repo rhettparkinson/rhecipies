@@ -3,14 +3,14 @@ layout: post
 cuisine: spanish
 tags: [healthy, comforting]
 preptime: 45 mins
-excerpt: This stew of chickpeas from the southern Spanish province of Granada is distinct from others due to its unique thickener of egg and croutons.
+excerpt: This stew of chickpeas and capsicum originates from the southern Spanish province of Granada. It is distinct from other recipies due to its unique thickener of egg and croutons.
 ---
 
 {% ingredient %}
 
 - 1/2 onion, finely chopped
-- 1/2 green bell pepper, roughly chopped
-- 1/2 red bell pepper, roughly chopped
+- 1/2 green capsicum, roughly chopped
+- 1/2 red capsicum, roughly chopped
 - 5 cloves garlic, sliced
 - 1 tomato, finely chopped
 - 1 large potato, roughly chopped

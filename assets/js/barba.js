@@ -5,16 +5,20 @@
 const defaultTransition = {
   name: "default-transition",
   leave(data) {
-    // Define your leave animation here
+    if (visibleModal) {
+      setTimeout(() => {
+        closeModal(visibleModal);
+      }, 200);
+    }
     return data.current.container.animate([{ opacity: 1 }, { opacity: 0 }], {
       duration: 500,
       easing: "ease-in-out",
     }).finished;
   },
   enter(data) {
-    // Define your enter animation here
     const container = data.next.container;
     container.style.opacity = 0;
+    window.scrollTo(0, 0);
     container
       .animate([{ opacity: 0 }, { opacity: 1 }], {
         duration: 500,

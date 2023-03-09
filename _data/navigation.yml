@@ -1,6 +1,8 @@
+- name: Cuisines
+  link: /
 - name: Browse recipies
-  link: /recipies.html
+  link: /posts/
 - name: View tags
-  link: /tags.html
+  link: /tags/
 - name: Submit a link
-  link: /submit.html
+  link: /submit/

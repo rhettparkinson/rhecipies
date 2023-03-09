@@ -86,6 +86,10 @@
     width: auto;
     min-width: 10rem;
 
+    @media (max-width: 360px) {
+      min-width: 50%;
+    }
+
     &:not(.active) {
       color: var(--muted-color);
     }

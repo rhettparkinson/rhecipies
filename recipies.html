@@ -9,8 +9,8 @@ permalink: /posts/
     {% for post in site.posts %} {% assign cuisine = site.cuisines | where:
     "short_name", post.cuisine | first %}
     <div class="card masonry__item">
-      <a href="{{ post.url | relative_url }}">
-        <article>
+      <a href="{{ post.url | relative_url }}" x-data="{ shown: false }" x-intersect.once="shown = true">
+        <article x-bind:style="{ visibility: shown ? 'visible' : 'hidden' }" x-bind:class="{ 'fadeInUp': shown }">
           {% if post.image %}
             <div class="card__image">
               <img
@@ -50,4 +50,5 @@ permalink: /posts/
     </div>
     {% endfor %}
   </div>
+  
 </section>

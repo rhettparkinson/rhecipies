@@ -11,8 +11,8 @@ title: Cuisines
 
   {% for cuisine in site.cuisines %}
   <div class="card">
-    <a href="{{ cuisine.url | relative_url }}">
-      <article style="background-color: #{{ cuisine.color }}">
+    <a href="{{ cuisine.url | relative_url }}" x-data="{ shown: false }" x-intersect.once="shown = true">
+      <article style="background-color: #{{ cuisine.color }}" x-bind:style="{ visibility: shown ? 'visible' : 'hidden' }" x-bind:class="{ 'fadeInUp': shown }">
         <header class="card__header contrast">
           <div class="card__title">
             <h2>{{ cuisine.name }}</h2>

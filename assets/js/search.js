@@ -9,7 +9,7 @@ var sjs = SimpleJekyllSearch({
   resultsContainer: document.getElementById("search-results"),
   json: "/search.json",
   searchResultTemplate:
-    '<div class="card"><a href="{url}"><article><header class="card__header"><div class="card__meta"><div class="pills"><span>{cuisine}</span><span>{tags}</div></div><div class="card__title"><h2>{title}</h2></div></header><div class="card__content"><p>{desc}</p></article></a></div></div>',
+    '<div class="card"><a href="{url}" x-data="{ shown: false }" x-intersect.once="shown = true" :style="\'visibility: \' + (shown ? \'visible\' : \'hidden\')"><article class="card__content" :class="{ \'fadeInUp\': shown }"><header class="card__header"><div class="card__meta"><div class="pills"><span>{cuisine}</span><span>{tags}</div></div><div class="card__title"><h2>{title}</h2></div></header><div class="card__content"><p>{desc}</p></div></article></a></div>',
 });
 
 document.getElementById("search-input").focus();
@@ -37,3 +37,17 @@ document
       event.preventDefault();
     }
   });
+
+const formInput = document.querySelector("#search-form .form__input");
+const formElements = document.querySelector("#search-form .form__elements");
+
+window.addEventListener("scroll", () => {
+  const formElementsRect = formElements.getBoundingClientRect();
+  const formInputRect = formInput.getBoundingClientRect();
+  const top = formInputRect.top - formElementsRect.top;
+  if (!top <= 0) {
+    formInput.classList.add("stuck");
+  } else {
+    formInput.classList.remove("stuck");
+  }
+});

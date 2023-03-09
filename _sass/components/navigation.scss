@@ -37,6 +37,13 @@
   }
 }
 
+.nav--hidden {
+
+  #nav {
+    transform: translateY(-100%);
+  }
+}
+
 #nav {
   position: fixed;
   top: 0;
@@ -44,10 +51,6 @@
   z-index: 100;
   padding: 0;
   transition: transform 0.2s cubic-bezier(1, 0.01, 0.21, 0.99);
-
-  &.hidden {
-    transform: translateY(-100%);
-  }
 
   nav {
     background-color: var(--background-color);

@@ -5,4 +5,4 @@
 - name: View tags
   link: /tags/
 - name: Submit a link
-  hash: "#submit"
+  link: /submit/

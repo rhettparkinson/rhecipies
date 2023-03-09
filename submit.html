@@ -14,9 +14,9 @@ permalink: /submit/
   <div class="card">
     <form
       action="https://getform.io/f/c8b2a06c-14ed-4618-980e-39618b15d60e"
-      method="POST"
+      method="POST" x-data="{ shown: false }" x-intersect.once="shown = true"
     >
-      <article>
+      <article x-bind:style="{ visibility: shown ? 'visible' : 'hidden' }" x-bind:class="{ 'fadeInUp': shown }">
         <label for="name">
           Your name (optional)
           <input type="text" name="name" id="name" placeholder="Anony Mouse">

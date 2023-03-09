@@ -1,6 +1,5 @@
 if (document.getElementById("nav")) {
-  const navigation = document.getElementById("nav");
-  const offsetDown = 160;
+  const offsetDown = 360;
   const offsetUp = 80;
   let prevScrollpos = window.pageYOffset;
   let distanceScrolled = 0;
@@ -29,11 +28,12 @@ if (document.getElementById("nav")) {
 
   window.addEventListener("resize", function () {
     if (!userScrolling) { // only hide/show navbar if user is not scrolling
-      navigation.classList.remove("hidden");
+      document.body.classList.remove("nav--hidden");
     }
   });
 
-  window.setInterval(function () {
+  // Define a function to update the navbar based on scrolling behavior
+  function updateNavbar() {
     if (userScrolling) {
       var currentScrollPos = window.pageYOffset;
 
@@ -47,14 +47,19 @@ if (document.getElementById("nav")) {
 
       if (currentScrollPos > prevScrollpos && currentScrollPos >= offsetDown) {
         // If scrolled down by the offset or more, hide the nav element
-        navigation.classList.add("hidden");
+        document.body.classList.add("nav--hidden");
       } else if (currentScrollPos < prevScrollpos && distanceScrolled >= offsetUp) {
         // If scrolled up by the offset or more, show the nav element
-        navigation.classList.remove("hidden");
+        document.body.classList.remove("nav--hidden");
       }
 
       prevScrollpos = currentScrollPos;
     }
-  }, 100); // Check every 100ms for user scrolling behavior
-}
 
+    // Schedule the function to run again before the next repaint
+    window.requestAnimationFrame(updateNavbar);
+  }
+
+  // Start the animation loop
+  updateNavbar();
+}
